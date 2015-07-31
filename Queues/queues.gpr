@@ -1,0 +1,82 @@
+project Queues is
+
+   for Source_Dirs use ("Sources");
+   for Object_Dir use "Objects";
+   for Exec_Dir use "Executables";
+   type Specific_Build_Modes_Type is
+      ("Production", "Development", "Performance");
+   Specific_Build_Modes : Specific_Build_Modes_Type := external ("Specific_build_modes", "Development");
+
+   package Compiler is
+
+      case Specific_Build_Modes is
+
+         when "Production" =>
+            for Default_Switches ("ada") use ("-gnatVarpmifedcO", "-gnatw.a.bc.cdfgh.hi.ijk.kl.lm.m.no.op.pqr.r.st.tu.uv.vw.wx.xyz", "-gnat12", "-gnatyaAbBcCdehfiklnOprStux", "-gnato", "-fstack-check", "-gnatE", "-gnata", "-O2", "-gnatn", 
+               "-funroll-loops");
+
+         when "Development" =>
+            for Default_Switches ("ada") use ("-gnatw.a.bc.cdfgh.hi.ijk.kl.lm.m.no.op.pqr.r.st.tu.uv.vw.wx.xyz", "-gnatVarpmifedcO", "-gnat12", "-gnatyaAbBcCehfiIklnOprStux", "-gnato", "-fstack-check", "-gnatE", "-gnata", "-g");
+
+         when "Performance" =>
+            for Default_Switches ("ada") use ("-gnatVn", "-gnatw.a.bc.cdfgh.hi.ijk.kl.lm.m.no.op.pqr.r.st.tu.uv.vw.wx.xyz", "-gnat12", "-gnatyaAbBcCdehfiIklnOprStux", "-gnatn", "-funroll-loops", "-O3");
+      end case;
+   end Compiler;
+
+   package Builder is
+
+      case Specific_Build_Modes is
+
+         when "Production" =>
+            for Default_Switches ("ada") use ("-s", "-m");
+
+         when "Development" =>
+            for Default_Switches ("ada") use ("-s", "-g", "-m");
+
+         when "Performance" =>
+            for Default_Switches ("ada") use ("-s", "-m");
+      end case;
+   end Builder;
+
+   package Ide is
+      for Documentation_Dir use "Documentation";
+   end Ide;
+
+   package Pretty_Printer is
+      for Default_Switches ("ada") use ("-l3");
+   end Pretty_Printer;
+
+   package Linker is
+
+      case Specific_Build_Modes is
+
+         when "Production" =>
+
+         when "Development" =>
+            for Default_Switches ("ada") use ("-g");
+
+         when "Performance" =>
+
+      end case;
+   end Linker;
+
+   case Specific_Build_Modes is
+
+      when "Production" =>
+         for Main use ("queues_test.adb", "queues_test_priorities.adb", "queues_test_protected_generic.adb", "queue_test_contract.adb", "queue_test_dispatching.adb", "queue_test_dispatching_tasks.adb", 
+            "queue_test_dispatching_unsync.adb", "queue_test_exceptions.adb", "queue_test_generic.adb", "queue_test_object.adb", "queue_test_object_base.adb", "queue_test_object_base_private.adb", 
+            "queue_test_object_private.adb", "queue_test_private.adb", "queue_test_protected.adb", "queue_test_protected_generic.adb", "queue_test_simple.adb");
+
+      when "Development" =>
+         for Main use ("queues_test.adb", "queues_test_priorities.adb", "queues_test_protected_generic.adb", "queue_test_contract.adb", "queue_test_dispatching.adb", "queue_test_dispatching_tasks.adb", 
+            "queue_test_dispatching_unsync.adb", "queue_test_exceptions.adb", "queue_test_generic.adb", "queue_test_object.adb", "queue_test_object_base.adb", "queue_test_object_base_private.adb", 
+            "queue_test_object_private.adb", "queue_test_private.adb", "queue_test_protected.adb", "queue_test_protected_generic.adb", "queue_test_simple.adb", "stack_test_simple.adb");
+
+      when "Performance" =>
+         for Main use ("queues_test.adb", "queues_test_priorities.adb", "queues_test_protected_generic.adb", "queue_test_contract.adb", "queue_test_dispatching.adb", "queue_test_dispatching_tasks.adb", 
+            "queue_test_dispatching_unsync.adb", "queue_test_exceptions.adb", "queue_test_generic.adb", "queue_test_object.adb", "queue_test_object_base.adb", "queue_test_object_base_private.adb", 
+            "queue_test_object_private.adb", "queue_test_private.adb", "queue_test_protected.adb", "queue_test_protected_generic.adb", "queue_test_simple.adb");
+   end case;
+
+end Queues;
+
