@@ -4,6 +4,6 @@
 # Ada Library Information
 *.ali
 
-Queues/Executables/
-
+*/Objects/*
+*/Executables/*
 .DS_Store
