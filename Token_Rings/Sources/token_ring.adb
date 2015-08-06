@@ -45,7 +45,6 @@ package body Token_Ring is
                Have_Data_Token := False;
                Put_Line ("Task" & Image (Current_Task) & " passed data token");
          or delay 0.001;
-            null;
          end select;
       end loop;
    end Token_Task;
