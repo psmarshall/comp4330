@@ -7,6 +7,9 @@ with Ada.Task_Identification; use Ada.Task_Identification;
 package body Token_Ring is
    task body Token_Task is
       Next : Token_Task_Access;
+      -- We can store our own copy of each token
+      Local_Data_Token : Data_Token_Type;
+      Local_Status_Token : Status_Token_Type;
    begin
       -- In a token ring, we need to know who our neighbour in the ring is.
       -- Accept a pointer to the next task and store it. Note that this must be
