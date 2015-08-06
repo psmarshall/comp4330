@@ -1,0 +1,14 @@
+project Token_Rings is
+
+   for Source_Dirs use ("Sources");
+   for Object_Dir use "Objects/";
+   for Exec_Dir use "Executables/";
+
+   package Ide is
+      for Documentation_Dir use "Documentation/";
+   end Ide;
+
+   for Main use ("token_ring_test.adb");
+
+end Token_Rings;
+
