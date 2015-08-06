@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>
+    File: queue_test_exceptions.adb
+  </title>
+  <link rel='stylesheet' href='support/docgen.css' type='text/css'/>
+  <link rel='stylesheet' href='support/tags.css' type='text/css'/>
+  <script src='support/docgen.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body onload="onloadDoc();">
+
+<div id='leftSide'>
+  <div id='leftSideInside'>
+  <div id='header'>
+    <h2 class="button">Documentation</h2>
+    <a href='toc.html'><div class="button2">Table of Contents</div></a>
+
+    <a href='tree.html'><div class="button2">Class Inheritance Tree</div></a>
+
+  </div>
+  </div>
+</div> <!-- leftSide -->
+
+<div class='subprograms'>
+  <div class='details'><ol><li id="l1"><pre><span class="comment">--</span> </pre></li>
+<li id="l2"><pre><span class="comment">-- Uwe R. Zimmer, Australia, 2015</span> </pre></li>
+<li id="l3"><pre><span class="comment">--</span> </pre></li>
+<li id="l4"><pre> </pre></li>
+<li id="l5"><pre><span class="keyword">with</span> Ada.Text_IO;           <span class="keyword">use</span> Ada.Text_IO; </pre></li>
+<li id="l6"><pre><span class="keyword">with</span> <span class="droplink">Queue_Pack_Exceptions<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:5:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l5" title="To spec">To spec</a></li><li><a href="src_queue_pack_exceptions.adb.html#l5" title="To body">To body</a></li></ul></span>; <span class="keyword">use</span> <span class="droplink">Queue_Pack_Exceptions<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:5:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l5" title="To spec">To spec</a></li><li><a href="src_queue_pack_exceptions.adb.html#l5" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l7"><pre> </pre></li>
+<li id="l8"><pre><span class="keyword">procedure</span> Queue_Test_Exceptions <span class="keyword">is</span> </pre></li>
+<li id="l9"><pre> </pre></li>
+<li id="l10"><pre>   Queue : <span class="droplink">Queue_Type<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l11" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l11"><pre> </pre></li>
+<li id="l12"><pre><span class="keyword">begin</span> </pre></li>
+<li id="l13"><pre>   <span class="keyword">declare</span> </pre></li>
+<li id="l14"><pre>      Written_Item : <span class="droplink">Element<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:8:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l8" title="To spec">To spec</a></li></ul></span> := <span class="droplink">Element<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:8:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l8" title="To spec">To spec</a></li></ul></span>&apos;First; </pre></li>
+<li id="l15"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l16"><pre>      <span class="keyword">for</span> i <span class="keyword">in</span> 1 .. <span class="droplink">Queue_Size<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:7:4" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l7" title="To spec">To spec</a></li></ul></span> <span class="keyword">loop</span> </pre></li>
+<li id="l17"><pre>         <span class="droplink">Enqueue<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:17:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l17" title="To spec">To spec</a></li><li><a href="src_queue_pack_exceptions.adb.html#l7" title="To body">To body</a></li></ul></span> (Written_Item, <a href="src_queue_test_exceptions.adb.html#l10" title="defined at queue_test_exceptions.adb:10:4">Queue</a>); </pre></li>
+<li id="l18"><pre>         Written_Item := <span class="droplink">Element<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:8:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l8" title="To spec">To spec</a></li></ul></span>&apos;Succ (Written_Item); </pre></li>
+<li id="l19"><pre>      <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l20"><pre>   <span class="keyword">end</span>; </pre></li>
+<li id="l21"><pre> </pre></li>
+<li id="l22"><pre>   Put_Line (<span class="string">&quot;Correct: Queue accepted 10 elements&quot;</span>); </pre></li>
+<li id="l23"><pre> </pre></li>
+<li id="l24"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l25"><pre>      <span class="droplink">Enqueue<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:17:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l17" title="To spec">To spec</a></li><li><a href="src_queue_pack_exceptions.adb.html#l7" title="To body">To body</a></li></ul></span> (<span class="droplink">Element<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:8:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l8" title="To spec">To spec</a></li></ul></span>&apos;First, <a href="src_queue_test_exceptions.adb.html#l10" title="defined at queue_test_exceptions.adb:10:4">Queue</a>); </pre></li>
+<li id="l26"><pre>      <span class="keyword">raise</span> Program_Error <span class="keyword">with</span> <span class="string">&quot;Queue accepted 11 elements&quot;</span>; </pre></li>
+<li id="l27"><pre>   <span class="keyword">exception</span> </pre></li>
+<li id="l28"><pre>      <span class="keyword">when</span> <span class="droplink">Queue_overflow<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:26:4" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l26" title="To spec">To spec</a></li></ul></span> =&gt; Put_Line (<span class="string">&quot;Correct: Queue rejected to enqueue an 11th element&quot;</span>); </pre></li>
+<li id="l29"><pre>   <span class="keyword">end</span>; </pre></li>
+<li id="l30"><pre> </pre></li>
+<li id="l31"><pre>   <span class="keyword">if</span> <span class="droplink">Is_Empty<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:20:13" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l20" title="To spec">To spec</a></li></ul></span> (<a href="src_queue_test_exceptions.adb.html#l10" title="defined at queue_test_exceptions.adb:10:4">Queue</a>) <span class="keyword">then</span> </pre></li>
+<li id="l32"><pre>      <span class="keyword">raise</span> Program_Error <span class="keyword">with</span> <span class="string">&quot;Queue should not be empty after adding 10 elements&quot;</span>; </pre></li>
+<li id="l33"><pre>   <span class="keyword">elsif</span> <span class="keyword">not</span> <span class="droplink">Is_Full<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:23:13" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l23" title="To spec">To spec</a></li></ul></span> (<a href="src_queue_test_exceptions.adb.html#l10" title="defined at queue_test_exceptions.adb:10:4">Queue</a>) <span class="keyword">then</span> </pre></li>
+<li id="l34"><pre>      <span class="keyword">raise</span> Program_Error <span class="keyword">with</span> <span class="string">&quot;Queue should be full after adding 10 elements&quot;</span>; </pre></li>
+<li id="l35"><pre>   <span class="keyword">else</span> </pre></li>
+<li id="l36"><pre>      Put_Line (<span class="string">&quot;Correct: Queue is full after adding 10 elements&quot;</span>); </pre></li>
+<li id="l37"><pre>   <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l38"><pre> </pre></li>
+<li id="l39"><pre>   <span class="keyword">declare</span> </pre></li>
+<li id="l40"><pre>      Written_Item : <span class="droplink">Element<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:8:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l8" title="To spec">To spec</a></li></ul></span> := <span class="droplink">Element<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:8:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l8" title="To spec">To spec</a></li></ul></span>&apos;First; </pre></li>
+<li id="l41"><pre>      Read_Item    : <span class="droplink">Element<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:8:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l8" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l42"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l43"><pre> </pre></li>
+<li id="l44"><pre>      <span class="keyword">for</span> i <span class="keyword">in</span> 1 .. <span class="droplink">Queue_Size<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:7:4" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l7" title="To spec">To spec</a></li></ul></span> <span class="keyword">loop</span> </pre></li>
+<li id="l45"><pre>         <span class="droplink">Dequeue<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:18:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l18" title="To spec">To spec</a></li><li><a href="src_queue_pack_exceptions.adb.html#l18" title="To body">To body</a></li></ul></span> (Read_Item, <a href="src_queue_test_exceptions.adb.html#l10" title="defined at queue_test_exceptions.adb:10:4">Queue</a>); </pre></li>
+<li id="l46"><pre>         <span class="keyword">if</span> Read_Item /= Written_Item <span class="keyword">then</span> </pre></li>
+<li id="l47"><pre>            <span class="keyword">raise</span> Program_Error <span class="keyword">with</span> <span class="string">&quot;The elements are dequeing incorrectly&quot;</span>; </pre></li>
+<li id="l48"><pre>         <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l49"><pre>         Written_Item := <span class="droplink">Element<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:8:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l8" title="To spec">To spec</a></li></ul></span>&apos;Succ (Written_Item); </pre></li>
+<li id="l50"><pre>      <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l51"><pre>   <span class="keyword">end</span>; </pre></li>
+<li id="l52"><pre> </pre></li>
+<li id="l53"><pre>   Put_Line (<span class="string">&quot;Correct: Queue re-produced 10 elements in the correct order&quot;</span>); </pre></li>
+<li id="l54"><pre> </pre></li>
+<li id="l55"><pre>   <span class="keyword">declare</span> </pre></li>
+<li id="l56"><pre>      Read_Item    : <span class="droplink">Element<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:8:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l8" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l57"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l58"><pre>      <span class="droplink">Dequeue<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:18:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l18" title="To spec">To spec</a></li><li><a href="src_queue_pack_exceptions.adb.html#l18" title="To body">To body</a></li></ul></span> (Read_Item, <a href="src_queue_test_exceptions.adb.html#l10" title="defined at queue_test_exceptions.adb:10:4">Queue</a>); </pre></li>
+<li id="l59"><pre>      <span class="keyword">raise</span> Program_Error <span class="keyword">with</span> <span class="string">&quot;Queue dequeued an element from an empty queue&quot;</span>; </pre></li>
+<li id="l60"><pre>   <span class="keyword">exception</span> </pre></li>
+<li id="l61"><pre>      <span class="keyword">when</span> <span class="droplink">Queue_underflow<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:26:20" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l26" title="To spec">To spec</a></li></ul></span> =&gt; Put_Line (<span class="string">&quot;Correct: Queue rejected to dequeue from an empty queue&quot;</span>); </pre></li>
+<li id="l62"><pre>   <span class="keyword">end</span>; </pre></li>
+<li id="l63"><pre> </pre></li>
+<li id="l64"><pre>   <span class="keyword">if</span> <span class="keyword">not</span> <span class="droplink">Is_Empty<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:20:13" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l20" title="To spec">To spec</a></li></ul></span> (<a href="src_queue_test_exceptions.adb.html#l10" title="defined at queue_test_exceptions.adb:10:4">Queue</a>) <span class="keyword">then</span> </pre></li>
+<li id="l65"><pre>      <span class="keyword">raise</span> Program_Error <span class="keyword">with</span> <span class="string">&quot;Queue should be empty after adding and removing 10 elements&quot;</span>; </pre></li>
+<li id="l66"><pre>   <span class="keyword">elsif</span> <span class="droplink">Is_Full<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:23:13" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l23" title="To spec">To spec</a></li></ul></span> (<a href="src_queue_test_exceptions.adb.html#l10" title="defined at queue_test_exceptions.adb:10:4">Queue</a>) <span class="keyword">then</span> </pre></li>
+<li id="l67"><pre>      <span class="keyword">raise</span> Program_Error <span class="keyword">with</span> <span class="string">&quot;Queue should not be full after adding and removing 10 elements&quot;</span>; </pre></li>
+<li id="l68"><pre>   <span class="keyword">else</span> </pre></li>
+<li id="l69"><pre>      Put_Line (<span class="string">&quot;Correct: Queue is empty after adding and removing 10 elements&quot;</span>); </pre></li>
+<li id="l70"><pre>   <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l71"><pre> </pre></li>
+<li id="l72"><pre>   Put_Line (<span class="string">&quot;All cool - all tests passed&quot;</span>); </pre></li>
+<li id="l73"><pre> </pre></li>
+<li id="l74"><pre><span class="keyword">exception</span> </pre></li>
+<li id="l75"><pre>   <span class="keyword">when</span> <span class="droplink">Queue_underflow<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:26:20" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l26" title="To spec">To spec</a></li></ul></span> =&gt; Put (<span class="string">&quot;Queue underflow&quot;</span>); </pre></li>
+<li id="l76"><pre>   <span class="keyword">when</span> <span class="droplink">Queue_overflow<ul><li><a href="queue_pack_exceptions.ads.html#queue_pack_exceptions.ads:26:4" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_exceptions.ads.html#l26" title="To spec">To spec</a></li></ul></span>  =&gt; Put (<span class="string">&quot;Queue overflow&quot;</span>); </pre></li>
+<li id="l77"><pre> </pre></li>
+<li id="l78"><pre><span class="comment">--     Queue : Queue_Type;</span> </pre></li>
+<li id="l79"><pre><span class="comment">--     Item  : Element;</span> </pre></li>
+<li id="l80"><pre><span class="comment">--</span> </pre></li>
+<li id="l81"><pre><span class="comment">--  begin</span> </pre></li>
+<li id="l82"><pre><span class="comment">--     Enqueue (Turn, Queue);</span> </pre></li>
+<li id="l83"><pre><span class="comment">--</span> </pre></li>
+<li id="l84"><pre><span class="comment">--     Dequeue (Item, Queue); Put (Element&apos;Image (Item));</span> </pre></li>
+<li id="l85"><pre><span class="comment">--</span> </pre></li>
+<li id="l86"><pre><span class="comment">--     Dequeue (Item, Queue); -- will produce a &apos;Queue underflow&apos;</span> </pre></li>
+<li id="l87"><pre><span class="comment">--     Put (Element&apos;Image (Item));</span> </pre></li>
+<li id="l88"><pre><span class="comment">--</span> </pre></li>
+<li id="l89"><pre><span class="comment">--     Put (&quot;Queue is empty on exit: &quot;); Put (Boolean&apos;Image (Is_Empty (Queue)));</span> </pre></li>
+<li id="l90"><pre><span class="comment">--</span> </pre></li>
+<li id="l91"><pre><span class="comment">--  exception</span> </pre></li>
+<li id="l92"><pre><span class="comment">--     when Queue_underflow =&gt; Put (&quot;Queue underflow&quot;);</span> </pre></li>
+<li id="l93"><pre><span class="comment">--     when Queue_overflow  =&gt; Put (&quot;Queue overflow&quot;);</span> </pre></li>
+<li id="l94"><pre> </pre></li>
+<li id="l95"><pre><span class="keyword">end</span> <span class="droplink">Queue_Test_Exceptions<ul><li><a href="src_queue_test_exceptions.adb.html#l8" title="To spec">To spec</a></li><li><a href="src_queue_test_exceptions.adb.html#l8" title="To body">To body</a></li></ul></span>; </pre></li>
+</ol></div>
+</div>
+
+</body>
+</html>

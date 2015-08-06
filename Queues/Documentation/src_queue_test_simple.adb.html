@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>
+    File: queue_test_simple.adb
+  </title>
+  <link rel='stylesheet' href='support/docgen.css' type='text/css'/>
+  <link rel='stylesheet' href='support/tags.css' type='text/css'/>
+  <script src='support/docgen.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body onload="onloadDoc();">
+
+<div id='leftSide'>
+  <div id='leftSideInside'>
+  <div id='header'>
+    <h2 class="button">Documentation</h2>
+    <a href='toc.html'><div class="button2">Table of Contents</div></a>
+
+    <a href='tree.html'><div class="button2">Class Inheritance Tree</div></a>
+
+  </div>
+  </div>
+</div> <!-- leftSide -->
+
+<div class='subprograms'>
+  <div class='details'><ol><li id="l1"><pre><span class="comment">--</span> </pre></li>
+<li id="l2"><pre><span class="comment">-- Uwe R. Zimmer, Australia, 2013</span> </pre></li>
+<li id="l3"><pre><span class="comment">--</span> </pre></li>
+<li id="l4"><pre> </pre></li>
+<li id="l5"><pre><span class="keyword">with</span> Ada.Text_IO;       <span class="keyword">use</span> Ada.Text_IO; </pre></li>
+<li id="l6"><pre><span class="keyword">with</span> <span class="droplink">Queue_Pack_Simple<ul><li><a href="queue_pack_simple.ads.html#queue_pack_simple.ads:5:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_simple.ads.html#l5" title="To spec">To spec</a></li><li><a href="src_queue_pack_simple.adb.html#l5" title="To body">To body</a></li></ul></span>; <span class="keyword">use</span> <span class="droplink">Queue_Pack_Simple<ul><li><a href="queue_pack_simple.ads.html#queue_pack_simple.ads:5:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_simple.ads.html#l5" title="To spec">To spec</a></li><li><a href="src_queue_pack_simple.adb.html#l5" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l7"><pre> </pre></li>
+<li id="l8"><pre><span class="keyword">procedure</span> Queue_Test_Simple <span class="keyword">is</span> </pre></li>
+<li id="l9"><pre> </pre></li>
+<li id="l10"><pre>   Queue : <span class="droplink">Queue_Type<ul><li><a href="queue_pack_simple.ads.html#queue_pack_simple.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_simple.ads.html#l11" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l11"><pre>   Item  : <span class="droplink">Element<ul><li><a href="queue_pack_simple.ads.html#queue_pack_simple.ads:8:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_simple.ads.html#l8" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l12"><pre> </pre></li>
+<li id="l13"><pre><span class="keyword">begin</span> </pre></li>
+<li id="l14"><pre>   <span class="droplink">Enqueue<ul><li><a href="queue_pack_simple.ads.html#queue_pack_simple.ads:17:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_simple.ads.html#l17" title="To spec">To spec</a></li><li><a href="src_queue_pack_simple.adb.html#l7" title="To body">To body</a></li></ul></span> (2000, <a href="src_queue_test_simple.adb.html#l10" title="defined at queue_test_simple.adb:10:4">Queue</a>); </pre></li>
+<li id="l15"><pre> </pre></li>
+<li id="l16"><pre>   <span class="droplink">Dequeue<ul><li><a href="queue_pack_simple.ads.html#queue_pack_simple.ads:18:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_simple.ads.html#l18" title="To spec">To spec</a></li><li><a href="src_queue_pack_simple.adb.html#l15" title="To body">To body</a></li></ul></span> (<a href="src_queue_test_simple.adb.html#l11" title="defined at queue_test_simple.adb:11:4">Item</a>, <a href="src_queue_test_simple.adb.html#l10" title="defined at queue_test_simple.adb:10:4">Queue</a>); Put (<span class="droplink">Element<ul><li><a href="queue_pack_simple.ads.html#queue_pack_simple.ads:8:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_simple.ads.html#l8" title="To spec">To spec</a></li></ul></span>&apos;Image (<a href="src_queue_test_simple.adb.html#l11" title="defined at queue_test_simple.adb:11:4">Item</a>)); </pre></li>
+<li id="l17"><pre> </pre></li>
+<li id="l18"><pre>   <span class="droplink">Dequeue<ul><li><a href="queue_pack_simple.ads.html#queue_pack_simple.ads:18:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_simple.ads.html#l18" title="To spec">To spec</a></li><li><a href="src_queue_pack_simple.adb.html#l15" title="To body">To body</a></li></ul></span> (<a href="src_queue_test_simple.adb.html#l11" title="defined at queue_test_simple.adb:11:4">Item</a>, <a href="src_queue_test_simple.adb.html#l10" title="defined at queue_test_simple.adb:10:4">Queue</a>); <span class="comment">-- will raise an &apos;invalid data&apos; exception!</span> </pre></li>
+<li id="l19"><pre>   Put (<span class="droplink">Element<ul><li><a href="queue_pack_simple.ads.html#queue_pack_simple.ads:8:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_simple.ads.html#l8" title="To spec">To spec</a></li></ul></span>&apos;Image (<a href="src_queue_test_simple.adb.html#l11" title="defined at queue_test_simple.adb:11:4">Item</a>)); </pre></li>
+<li id="l20"><pre> </pre></li>
+<li id="l21"><pre>   Put (<span class="string">&quot;Queue is empty on exit: &quot;</span>); Put (Boolean&apos;Image (<span class="droplink">Is_Empty<ul><li><a href="queue_pack_simple.ads.html#queue_pack_simple.ads:20:13" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_simple.ads.html#l20" title="To spec">To spec</a></li></ul></span> (<a href="src_queue_test_simple.adb.html#l10" title="defined at queue_test_simple.adb:10:4">Queue</a>))); </pre></li>
+<li id="l22"><pre> </pre></li>
+<li id="l23"><pre><span class="keyword">end</span> <span class="droplink">Queue_Test_Simple<ul><li><a href="src_queue_test_simple.adb.html#l8" title="To spec">To spec</a></li><li><a href="src_queue_test_simple.adb.html#l8" title="To body">To body</a></li></ul></span>; </pre></li>
+</ol></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>
+    File: queue_test_dispatching.adb
+  </title>
+  <link rel='stylesheet' href='support/docgen.css' type='text/css'/>
+  <link rel='stylesheet' href='support/tags.css' type='text/css'/>
+  <script src='support/docgen.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body onload="onloadDoc();">
+
+<div id='leftSide'>
+  <div id='leftSideInside'>
+  <div id='header'>
+    <h2 class="button">Documentation</h2>
+    <a href='toc.html'><div class="button2">Table of Contents</div></a>
+
+    <a href='tree.html'><div class="button2">Class Inheritance Tree</div></a>
+
+  </div>
+  </div>
+</div> <!-- leftSide -->
+
+<div class='subprograms'>
+  <div class='details'><ol><li id="l1"><pre><span class="comment">--</span> </pre></li>
+<li id="l2"><pre><span class="comment">-- Uwe R. Zimmer, Australia, 2013</span> </pre></li>
+<li id="l3"><pre><span class="comment">--</span> </pre></li>
+<li id="l4"><pre> </pre></li>
+<li id="l5"><pre><span class="keyword">with</span> Ada.Text_IO;         <span class="keyword">use</span> Ada.Text_IO; </pre></li>
+<li id="l6"><pre><span class="keyword">with</span> <span class="droplink">Queue_Pack_Abstract<ul><li><a href="queue_pack_abstract.ads.html#queue_pack_abstract.ads:9:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_abstract.ads.html#l9" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l7"><pre><span class="keyword">with</span> <span class="droplink">Queue_Pack_Concrete<ul><li><a href="queue_pack_concrete.ads.html#queue_pack_concrete.ads:12:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_concrete.ads.html#l12" title="To spec">To spec</a></li><li><a href="src_queue_pack_concrete.adb.html#l5" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l8"><pre> </pre></li>
+<li id="l9"><pre><span class="keyword">procedure</span> Queue_Test_Dispatching <span class="keyword">is</span> </pre></li>
+<li id="l10"><pre> </pre></li>
+<li id="l11"><pre>   <span class="keyword">package</span> Queue_Pack_Abstract_Character <span class="keyword">is</span> </pre></li>
+<li id="l12"><pre>     <span class="keyword">new</span> <span class="droplink">Queue_Pack_Abstract<ul><li><a href="queue_pack_abstract.ads.html#queue_pack_abstract.ads:9:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_abstract.ads.html#l9" title="To spec">To spec</a></li></ul></span> (Character); </pre></li>
+<li id="l13"><pre>   <span class="keyword">use</span> <a href="src_queue_test_dispatching.adb.html#l11" title="defined at queue_test_dispatching.adb:11:12">Queue_Pack_Abstract_Character</a>; </pre></li>
+<li id="l14"><pre> </pre></li>
+<li id="l15"><pre>   <span class="keyword">type</span> Queue_Size <span class="keyword">is</span> <span class="keyword">mod</span> 3; </pre></li>
+<li id="l16"><pre> </pre></li>
+<li id="l17"><pre>   <span class="keyword">package</span> Queue_Pack_Character <span class="keyword">is</span> </pre></li>
+<li id="l18"><pre>     <span class="keyword">new</span> <span class="droplink">Queue_Pack_Concrete<ul><li><a href="queue_pack_concrete.ads.html#queue_pack_concrete.ads:12:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_concrete.ads.html#l12" title="To spec">To spec</a></li><li><a href="src_queue_pack_concrete.adb.html#l5" title="To body">To body</a></li></ul></span> (<a href="src_queue_test_dispatching.adb.html#l11" title="defined at queue_test_dispatching.adb:11:12">Queue_Pack_Abstract_Character</a>, <a href="src_queue_test_dispatching.adb.html#l15" title="defined at queue_test_dispatching.adb:15:9">Queue_Size</a>); </pre></li>
+<li id="l19"><pre>   <span class="keyword">use</span> <a href="src_queue_test_dispatching.adb.html#l17" title="defined at queue_test_dispatching.adb:17:12">Queue_Pack_Character</a>; </pre></li>
+<li id="l20"><pre> </pre></li>
+<li id="l21"><pre>   <span class="keyword">type</span> Queue_Class <span class="keyword">is</span> <span class="keyword">access</span> <span class="keyword">all</span> <span class="droplink">Queue_Interface<ul><li><a href="queue_pack_abstract.ads.html#queue_pack_abstract.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_abstract.ads.html#l11" title="To spec">To spec</a></li></ul></span>&apos;class; </pre></li>
+<li id="l22"><pre> </pre></li>
+<li id="l23"><pre>   <span class="keyword">task</span> <a href="src_queue_test_dispatching.adb.html#l29" title="defined at queue_test_dispatching.adb:23:9">Queue_Holder</a>; <span class="comment">-- could be on an individual partition / separate computer</span> </pre></li>
+<li id="l24"><pre> </pre></li>
+<li id="l25"><pre>   <span class="keyword">task</span> <a href="src_queue_test_dispatching.adb.html#l40" title="defined at queue_test_dispatching.adb:25:9">Queue_User</a> <span class="keyword">is</span> <span class="comment">-- could be on an individual partition / separate computer</span> </pre></li>
+<li id="l26"><pre>      <span class="keyword">entry</span> <a href="src_queue_test_dispatching.adb.html#l46" title="defined at queue_test_dispatching.adb:26:13">Send_Queue</a> (Remote_Queue : <a href="src_queue_test_dispatching.adb.html#l21" title="defined at queue_test_dispatching.adb:21:9">Queue_Class</a>); </pre></li>
+<li id="l27"><pre>   <span class="keyword">end</span> <span class="droplink">Queue_User<ul><li><a href="src_queue_test_dispatching.adb.html#l25" title="To spec">To spec</a></li><li><a href="src_queue_test_dispatching.adb.html#l40" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l28"><pre> </pre></li>
+<li id="l29"><pre>   <span class="keyword">task</span> <span class="keyword">body</span> <a href="src_queue_test_dispatching.adb.html#l23" title="defined at queue_test_dispatching.adb:23:9">Queue_Holder</a> <span class="keyword">is</span> </pre></li>
+<li id="l30"><pre> </pre></li>
+<li id="l31"><pre>      Local_Queue : <span class="keyword">constant</span> <a href="src_queue_test_dispatching.adb.html#l21" title="defined at queue_test_dispatching.adb:21:9">Queue_Class</a> := <span class="keyword">new</span> <span class="droplink">Protected_Queue<ul><li><a href="queue_pack_concrete.ads.html#queue_pack_concrete.ads:18:19" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_concrete.ads.html#l18" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l32"><pre>      Item        : Character; </pre></li>
+<li id="l33"><pre> </pre></li>
+<li id="l34"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l35"><pre>      <span class="droplink">Queue_User.Send_Queue<ul><li><a href="src_queue_test_dispatching.adb.html#l26" title="To spec">To spec</a></li><li><a href="src_queue_test_dispatching.adb.html#l46" title="To body">To body</a></li></ul></span> (Local_Queue); </pre></li>
+<li id="l36"><pre>      Local_Queue.<span class="keyword">all</span>.<span class="droplink">Dequeue<ul><li><a href="queue_pack_abstract.ads.html#queue_pack_abstract.ads:14:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_abstract.ads.html#l14" title="To spec">To spec</a></li></ul></span> (Item); </pre></li>
+<li id="l37"><pre>      Put_Line (<span class="string">&quot;Local dequeue (Holder): &quot;</span> &amp; Character&apos;Image (Item)); </pre></li>
+<li id="l38"><pre>   <span class="keyword">end</span> <span class="droplink">Queue_Holder<ul><li><a href="src_queue_test_dispatching.adb.html#l23" title="To spec">To spec</a></li><li><a href="src_queue_test_dispatching.adb.html#l29" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l39"><pre> </pre></li>
+<li id="l40"><pre>   <span class="keyword">task</span> <span class="keyword">body</span> <a href="src_queue_test_dispatching.adb.html#l25" title="defined at queue_test_dispatching.adb:25:9">Queue_User</a> <span class="keyword">is</span> </pre></li>
+<li id="l41"><pre> </pre></li>
+<li id="l42"><pre>      Local_Queue : <span class="keyword">constant</span> <a href="src_queue_test_dispatching.adb.html#l21" title="defined at queue_test_dispatching.adb:21:9">Queue_Class</a> := <span class="keyword">new</span> <span class="droplink">Protected_Queue<ul><li><a href="queue_pack_concrete.ads.html#queue_pack_concrete.ads:18:19" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_concrete.ads.html#l18" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l43"><pre>      Item        : Character; </pre></li>
+<li id="l44"><pre> </pre></li>
+<li id="l45"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l46"><pre>      <span class="keyword">accept</span> <a href="src_queue_test_dispatching.adb.html#l26" title="defined at queue_test_dispatching.adb:26:13">Send_Queue</a> (Remote_Queue : <a href="src_queue_test_dispatching.adb.html#l21" title="defined at queue_test_dispatching.adb:21:9">Queue_Class</a>) <span class="keyword">do</span> </pre></li>
+<li id="l47"><pre>         <a href="src_queue_test_dispatching.adb.html#l26" title="defined at queue_test_dispatching.adb:26:25">Remote_Queue</a>.<span class="keyword">all</span>.<span class="droplink">Enqueue<ul><li><a href="queue_pack_abstract.ads.html#queue_pack_abstract.ads:13:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_abstract.ads.html#l13" title="To spec">To spec</a></li></ul></span> (<span class="string">&apos;r&apos;</span>); <span class="comment">-- potentially a remote procedure call!</span> </pre></li>
+<li id="l48"><pre>         Local_Queue.<span class="keyword">all</span>.<span class="droplink">Enqueue<ul><li><a href="queue_pack_abstract.ads.html#queue_pack_abstract.ads:13:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_abstract.ads.html#l13" title="To spec">To spec</a></li></ul></span>  (<span class="string">&apos;l&apos;</span>); </pre></li>
+<li id="l49"><pre>      <span class="keyword">end</span> <span class="droplink">Send_Queue<ul><li><a href="src_queue_test_dispatching.adb.html#l26" title="To spec">To spec</a></li><li><a href="src_queue_test_dispatching.adb.html#l46" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l50"><pre>      Local_Queue.<span class="keyword">all</span>.<span class="droplink">Dequeue<ul><li><a href="queue_pack_abstract.ads.html#queue_pack_abstract.ads:14:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_abstract.ads.html#l14" title="To spec">To spec</a></li></ul></span> (Item); </pre></li>
+<li id="l51"><pre>      Put_Line (<span class="string">&quot;Local dequeue (User)  : &quot;</span> &amp; Character&apos;Image (Item)); </pre></li>
+<li id="l52"><pre>   <span class="keyword">end</span> <span class="droplink">Queue_User<ul><li><a href="src_queue_test_dispatching.adb.html#l25" title="To spec">To spec</a></li><li><a href="src_queue_test_dispatching.adb.html#l40" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l53"><pre> </pre></li>
+<li id="l54"><pre><span class="keyword">begin</span> </pre></li>
+<li id="l55"><pre>   <span class="keyword">null</span>; </pre></li>
+<li id="l56"><pre><span class="keyword">end</span> <span class="droplink">Queue_Test_Dispatching<ul><li><a href="src_queue_test_dispatching.adb.html#l9" title="To spec">To spec</a></li><li><a href="src_queue_test_dispatching.adb.html#l9" title="To body">To body</a></li></ul></span>; </pre></li>
+</ol></div>
+</div>
+
+</body>
+</html>

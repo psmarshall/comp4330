@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>
+    Package: Queue_Pack_Contract
+  </title>
+  <link rel='stylesheet' href='support/docgen.css' type='text/css'/>
+  <link rel='stylesheet' href='support/tags.css' type='text/css'/>
+  <script src='support/docgen.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body onload="onloadDoc();">
+
+<div id='leftSide'>
+  <div id='leftSideInside'>
+  <div id='header'>
+    <h2 class="button">Documentation</h2>
+    <a href='toc.html'><div class="button2">Table of Contents</div></a>
+
+    <a href='tree.html'><div class="button2">Class Inheritance Tree</div></a>
+
+  </div>
+
+  <div id='navigation'>
+    <h2 class="button">Navigation</h2>
+    <a href='#Description'><div class="button2">Description</div></a>
+    <a href='#Types'><div class="button2">Types</div></a>
+    <a href='#Constants'><div class="button2">Constants &amp; Global variables</div></a>
+    <a href='#Methods'><div class="button2">Subprograms &amp; Entries</div></a>
+  </div><!-- navigation -->
+  </div>
+</div> <!-- leftSide -->
+
+<div class='default' id='rightSide'>
+ <div id='rightSideInside'>
+ <div id='Index'>
+  <h2>Index</h2>
+  <script type="text/javascript">
+    var names = new Array (
+new Array ('Element', 'queue_pack_contract.ads:10:9', 'type-spec'),
+new Array ('Queue_<wbr/>Type', 'queue_pack_contract.ads:12:9', 'type-spec'),
+new Array ('Marker (private)', 'queue_pack_contract.ads:31:9', 'type-spec'),
+new Array ('List (private)', 'queue_pack_contract.ads:32:9', 'type-spec'),
+new Array ('Queue_<wbr/>Size', 'queue_pack_contract.ads:9:4', 'var-spec'),
+new Array ('Enqueue', 'queue_pack_contract.ads:14:14', 'subp-spec'),
+new Array ('Dequeue', 'queue_pack_contract.ads:20:14', 'subp-spec'),
+new Array ('Is_<wbr/>Empty', 'queue_pack_contract.ads:25:13', 'subp-spec'),
+new Array ('Is_<wbr/>Full', 'queue_pack_contract.ads:26:13', 'subp-spec'),
+new Array ('Length', 'queue_pack_contract.ads:27:13', 'subp-spec'),
+new Array ('Lookahead', 'queue_pack_contract.ads:28:13', 'subp-spec'),
+      new Array ('dummy', '', ''));
+    printIndexList (names);
+  </script>
+  <noscript>
+    <ul>
+      <li class='type-spec'><a href="#queue_pack_contract.ads:10:9">Element</a></li>
+      <li class='type-spec'><a href="#queue_pack_contract.ads:12:9">Queue_<wbr/>Type</a></li>
+      <li class='type-spec'><a href="#queue_pack_contract.ads:31:9">Marker (private)</a></li>
+      <li class='type-spec'><a href="#queue_pack_contract.ads:32:9">List (private)</a></li>
+      <li class='var-spec'><a href="#queue_pack_contract.ads:9:4">Queue_<wbr/>Size</a></li>
+      <li class='subp-spec'><a href="#queue_pack_contract.ads:14:14">Enqueue</a></li>
+      <li class='subp-spec'><a href="#queue_pack_contract.ads:20:14">Dequeue</a></li>
+      <li class='subp-spec'><a href="#queue_pack_contract.ads:25:13">Is_<wbr/>Empty</a></li>
+      <li class='subp-spec'><a href="#queue_pack_contract.ads:26:13">Is_<wbr/>Full</a></li>
+      <li class='subp-spec'><a href="#queue_pack_contract.ads:27:13">Length</a></li>
+      <li class='subp-spec'><a href="#queue_pack_contract.ads:28:13">Lookahead</a></li>
+    </ul>
+  </noscript>
+ </div>
+ </div>
+</div>
+
+<div class='default' id='documentation'>
+  <div class='title'>
+    Package:
+<span class="droplink"><i>Queue_Pack_Contract</i><ul>
+  <li><a href="src_queue_pack_contract.ads.html">Goto spec source</a></li>
+  <li><a href="src_queue_pack_contract.adb.html">Goto body source</a></li>
+</ul></span>
+  </div>
+  <div class='subprograms'>
+    <h1><a name='Description' id='Description'></a>Description</h1>
+    <div class="class">
+    <div class='details'><pre><span class="keyword">package</span> <span class="name_emphasis">Queue_Pack_Contract</span> <span class="keyword">is</span></pre></div>
+    <div class='comment'>
+Uwe R. Zimmer, Australia, 2013
+
+</div>
+    </div>
+  </div>
+
+
+
+
+  <div class='subprograms'>
+    <h1><a name='Types' id='Types'></a>Types</h1>
+    <div class="class">
+      <h3>
+        <a name='queue_pack_contract.ads:10:9' id='queue_pack_contract.ads:10:9'></a>
+<span class="droplink">Element<ul>
+  <li><a href="src_queue_pack_contract.ads.html#l10">Goto declaration in source</a></li>
+</ul></span>
+      </h3>
+      <div class='details'><pre><span class="keyword">type</span> <span class="name_emphasis">Element</span> <span class="keyword">is</span> <span class="keyword">new</span> Positive <span class="keyword">range</span> 1 .. 1000;</pre></div>
+      <div class='profile'>
+          <h4>References:</h4>
+          <div><i><a href="src_queue_pack_contract.ads.html#l10" title="queue_pack_contract.ads:10:9">queue_pack_contract.ads:10:9</a> (declaration)</i></div>
+          <div><i><a href="src_queue_pack_contract.adb.html#l7" title="queue_pack_contract.adb:7:30">queue_pack_contract.adb:7:30</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.adb.html#l15" title="queue_pack_contract.adb:15:34">queue_pack_contract.adb:15:34</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l14" title="queue_pack_contract.ads:14:34">queue_pack_contract.ads:14:34</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l20" title="queue_pack_contract.ads:20:34">queue_pack_contract.ads:20:34</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l28" title="queue_pack_contract.ads:28:65">queue_pack_contract.ads:28:65</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l32" title="queue_pack_contract.ads:32:35">queue_pack_contract.ads:32:35</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l49" title="queue_pack_contract.ads:49:65">queue_pack_contract.ads:49:65</a> (reference)</i></div>
+          <div><i><a href="src_queue_test_contract.adb.html#l13" title="queue_test_contract.adb:13:12">queue_test_contract.adb:13:12</a> (reference)</i></div>
+          <div><i><a href="src_queue_test_contract.adb.html#l20" title="queue_test_contract.adb:20:32">queue_test_contract.adb:20:32</a> (reference)</i></div>
+          <div><i><a href="src_queue_test_contract.adb.html#l21" title="queue_test_contract.adb:21:32">queue_test_contract.adb:21:32</a> (reference)</i></div>
+          <div><i><a href="src_queue_test_contract.adb.html#l22" title="queue_test_contract.adb:22:32">queue_test_contract.adb:22:32</a> (reference)</i></div>
+          <div><i><a href="src_queue_test_contract.adb.html#l25" title="queue_test_contract.adb:25:9">queue_test_contract.adb:25:9</a> (reference)</i></div>
+      </div>
+    </div>
+    <div class="class">
+      <h3>
+        <a name='queue_pack_contract.ads:12:9' id='queue_pack_contract.ads:12:9'></a>
+<span class="droplink">Queue_Type<ul>
+  <li><a href="src_queue_pack_contract.ads.html#l12">Goto declaration in source</a></li>
+  <li><a href="src_queue_pack_contract.ads.html#l33">Goto full declaration in source</a></li>
+</ul></span>
+      </h3>
+      <div class='details'><pre><span class="keyword">type</span> <span class="name_emphasis">Queue_Type</span> <span class="keyword">is</span> <span class="keyword">private</span>;</pre></div>
+      <div class='profile'>
+          <h4>References:</h4>
+          <div><i><a href="src_queue_pack_contract.ads.html#l12" title="queue_pack_contract.ads:12:9">queue_pack_contract.ads:12:9</a> (declaration)</i></div>
+          <div><i><a href="src_queue_pack_contract.adb.html#l7" title="queue_pack_contract.adb:7:50">queue_pack_contract.adb:7:50</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.adb.html#l15" title="queue_pack_contract.adb:15:54">queue_pack_contract.adb:15:54</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l14" title="queue_pack_contract.ads:14:54">queue_pack_contract.ads:14:54</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l20" title="queue_pack_contract.ads:20:54">queue_pack_contract.ads:20:54</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l25" title="queue_pack_contract.ads:25:28">queue_pack_contract.ads:25:28</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l26" title="queue_pack_contract.ads:26:28">queue_pack_contract.ads:26:28</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l27" title="queue_pack_contract.ads:27:28">queue_pack_contract.ads:27:28</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l28" title="queue_pack_contract.ads:28:28">queue_pack_contract.ads:28:28</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l33" title="queue_pack_contract.ads:33:9">queue_pack_contract.ads:33:9</a> (full declaration)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l40" title="queue_pack_contract.ads:40:27">queue_pack_contract.ads:40:27</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l43" title="queue_pack_contract.ads:43:26">queue_pack_contract.ads:43:26</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l46" title="queue_pack_contract.ads:46:25">queue_pack_contract.ads:46:25</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l49" title="queue_pack_contract.ads:49:28">queue_pack_contract.ads:49:28</a> (reference)</i></div>
+          <div><i><a href="src_queue_test_contract.adb.html#l12" title="queue_test_contract.adb:12:12">queue_test_contract.adb:12:12</a> (reference)</i></div>
+      </div>
+    </div>
+    <div class="class">
+      <h3>
+        <a name='queue_pack_contract.ads:31:9' id='queue_pack_contract.ads:31:9'></a>
+<span class="droplink">Marker (private)<ul>
+  <li><a href="src_queue_pack_contract.ads.html#l31">Goto declaration in source</a></li>
+</ul></span>
+      </h3>
+      <div class='details'><pre><span class="keyword">type</span> <span class="name_emphasis">Marker</span> <span class="keyword">is</span> <span class="keyword">mod</span> <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:9:4" title="defined at queue_pack_contract.ads:9:4">Queue_Size</a>;</pre></div>
+      <div class='profile'>
+          <h4>References:</h4>
+          <div><i><a href="src_queue_pack_contract.ads.html#l31" title="queue_pack_contract.ads:31:9">queue_pack_contract.ads:31:9</a> (declaration)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l32" title="queue_pack_contract.ads:32:24">queue_pack_contract.ads:32:24</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l34" title="queue_pack_contract.ads:34:19">queue_pack_contract.ads:34:19</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l34" title="queue_pack_contract.ads:34:30">queue_pack_contract.ads:34:30</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l50" title="queue_pack_contract.ads:50:27">queue_pack_contract.ads:50:27</a> (reference)</i></div>
+      </div>
+    </div>
+    <div class="class">
+      <h3>
+        <a name='queue_pack_contract.ads:32:9' id='queue_pack_contract.ads:32:9'></a>
+<span class="droplink">List (private)<ul>
+  <li><a href="src_queue_pack_contract.ads.html#l32">Goto declaration in source</a></li>
+</ul></span>
+      </h3>
+      <div class='details'><pre><span class="keyword">type</span> <span class="name_emphasis">List</span> <span class="keyword">is</span> <span class="keyword">array</span> (<a href="queue_pack_contract.ads.html#queue_pack_contract.ads:31:9" title="defined at queue_pack_contract.ads:31:9">Marker</a>) <span class="keyword">of</span> <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:10:9" title="defined at queue_pack_contract.ads:10:9">Element</a>;</pre></div>
+      <div class='profile'>
+          <h4>References:</h4>
+          <div><i><a href="src_queue_pack_contract.ads.html#l32" title="queue_pack_contract.ads:32:9">queue_pack_contract.ads:32:9</a> (declaration)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l36" title="queue_pack_contract.ads:36:19">queue_pack_contract.ads:36:19</a> (reference)</i></div>
+      </div>
+    </div>
+  </div>
+
+  <div class='subprograms'>
+    <h1><a name='Constants' id='Constants'></a>Constants &amp; Global variables</h1>
+    <div class="class">
+      <h3><a name='queue_pack_contract.ads:9:4' id='queue_pack_contract.ads:9:4'></a>
+<span class="droplink">Queue_Size<ul>
+  <li><a href="src_queue_pack_contract.ads.html#l9">Goto declaration in source</a></li>
+</ul></span>
+        <span class="type">(Positive)</span>
+      </h3>
+      <div class='details'><pre><span class="name_emphasis">Queue_Size</span> : <span class="keyword">constant</span> Positive := 10;</pre></div>
+      <div class='profile'>
+        <h4>References:</h4>
+          <div><i><a href="src_queue_pack_contract.ads.html#l9" title="queue_pack_contract.ads:9:4">queue_pack_contract.ads:9:4</a> (declaration)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l31" title="queue_pack_contract.ads:31:23">queue_pack_contract.ads:31:23</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_contract.ads.html#l47" title="queue_pack_contract.ads:47:27">queue_pack_contract.ads:47:27</a> (reference)</i></div>
+      </div>
+    </div>
+  </div>
+
+    <div class='subprograms'>
+      <h1><a name='Methods' id='Methods'></a>Subprograms &amp; Entries</h1>
+      <div class="class">
+        <h3>
+          <a name='queue_pack_contract.ads:14:14' id='queue_pack_contract.ads:14:14'></a>
+<span class="droplink">Enqueue<ul>
+  <li><a href="src_queue_pack_contract.ads.html#l14">Goto spec in source</a></li>
+  <li><a href="src_queue_pack_contract.adb.html#l7">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">procedure</span> <span class="name_emphasis">Enqueue</span> <table><tr><td>(</td><td><span class="name"><a name="queue_pack_contract.ads:14:23"></a>Item</span></td><td>:     <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:10:9" title="defined at queue_pack_contract.ads:10:9">Element</a>;</td></tr><tr><td></td><td><span class="name"><a name="queue_pack_contract.ads:14:43"></a>Q</span></td><td>: <span class="keyword">in</span> <span class="keyword">out</span> <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:12:9" title="defined at queue_pack_contract.ads:12:9">Queue_Type</a>) <span class="keyword">with</span> Pre  => <span class="keyword">not</span> <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:26:13" title="defined at queue_pack_contract.ads:26:13">Is_Full</a> (<a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:43" title="defined at queue_pack_contract.ads:14:43">Q</a>), Post => <span class="keyword">not</span> <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:25:13" title="defined at queue_pack_contract.ads:25:13">Is_Empty</a> (<a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:43" title="defined at queue_pack_contract.ads:14:43">Q</a>) <span class="keyword">and</span> <span class="keyword">then</span> <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:27:13" title="defined at queue_pack_contract.ads:27:13">Length</a> (<a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:43" title="defined at queue_pack_contract.ads:14:43">Q</a>) = <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:27:13" title="defined at queue_pack_contract.ads:27:13">Length</a> (<a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:43" title="defined at queue_pack_contract.ads:14:43">Q</a>'Old) + 1 <span class="keyword">and</span> <span class="keyword">then</span> <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:28:13" title="defined at queue_pack_contract.ads:28:13">Lookahead</a> (<a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:43" title="defined at queue_pack_contract.ads:14:43">Q</a>, <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:27:13" title="defined at queue_pack_contract.ads:27:13">Length</a> (<a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:43" title="defined at queue_pack_contract.ads:14:43">Q</a>)) = <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:23" title="defined at queue_pack_contract.ads:14:23">Item</a> <span class="keyword">and</span> <span class="keyword">then</span> (<span class="keyword">for</span> <span class="keyword">all</span> ix <span class="keyword">in</span> 1 .. <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:27:13" title="defined at queue_pack_contract.ads:27:13">Length</a> (<a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:43" title="defined at queue_pack_contract.ads:14:43">Q</a>'Old) => <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:28:13" title="defined at queue_pack_contract.ads:28:13">Lookahead</a> (<a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:43" title="defined at queue_pack_contract.ads:14:43">Q</a>, ix) = <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:28:13" title="defined at queue_pack_contract.ads:28:13">Lookahead</a> (<a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:43" title="defined at queue_pack_contract.ads:14:43">Q</a>'Old, ix));</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_queue_pack_contract.ads.html#l14" title="queue_pack_contract.ads:14:14">queue_pack_contract.ads:14:14</a> (declaration)</i></div>
+            <div><i><a href="src_queue_pack_contract.adb.html#l7" title="queue_pack_contract.adb:7:14">queue_pack_contract.adb:7:14</a> (body)</i></div>
+            <div><i><a href="src_queue_pack_contract.adb.html#l13" title="queue_pack_contract.adb:13:8">queue_pack_contract.adb:13:8</a> (label)</i></div>
+            <div><i><a href="src_queue_test_contract.adb.html#l16" title="queue_test_contract.adb:16:4">queue_test_contract.adb:16:4</a> (call)</i></div>
+            <div><i><a href="src_queue_test_contract.adb.html#l17" title="queue_test_contract.adb:17:4">queue_test_contract.adb:17:4</a> (call)</i></div>
+            <div><i><a href="src_queue_test_contract.adb.html#l18" title="queue_test_contract.adb:18:4">queue_test_contract.adb:18:4</a> (call)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="queue_test_contract.adb.html#queue_test_contract.adb:10:11" title="defined at queue_test_contract.adb:10:11">Queue_Test_Contract</a> defined at <a href="src_queue_test_contract.adb.html#l10" title="queue_test_contract.adb:10:11">queue_test_contract.adb:10:11</a></i></div>
+            <div><i><a href="queue_test_contract.adb.html#queue_test_contract.adb:10:11" title="defined at queue_test_contract.adb:10:11">Queue_Test_Contract</a> defined at <a href="src_queue_test_contract.adb.html#l10" title="queue_test_contract.adb:10:11">queue_test_contract.adb:10:11</a></i></div>
+            <div><i><a href="queue_test_contract.adb.html#queue_test_contract.adb:10:11" title="defined at queue_test_contract.adb:10:11">Queue_Test_Contract</a> defined at <a href="src_queue_test_contract.adb.html#l10" title="queue_test_contract.adb:10:11">queue_test_contract.adb:10:11</a></i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='queue_pack_contract.ads:20:14' id='queue_pack_contract.ads:20:14'></a>
+<span class="droplink">Dequeue<ul>
+  <li><a href="src_queue_pack_contract.ads.html#l20">Goto spec in source</a></li>
+  <li><a href="src_queue_pack_contract.adb.html#l15">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">procedure</span> <span class="name_emphasis">Dequeue</span> <table><tr><td>(</td><td><span class="name"><a name="queue_pack_contract.ads:20:23"></a>Item</span></td><td>: <span class="keyword">out</span> <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:10:9" title="defined at queue_pack_contract.ads:10:9">Element</a>;</td></tr><tr><td></td><td><span class="name"><a name="queue_pack_contract.ads:20:43"></a>Q</span></td><td>: <span class="keyword">in</span> <span class="keyword">out</span> <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:12:9" title="defined at queue_pack_contract.ads:12:9">Queue_Type</a>) <span class="keyword">with</span> Pre  => <span class="keyword">not</span> <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:25:13" title="defined at queue_pack_contract.ads:25:13">Is_Empty</a> (<a href="queue_pack_contract.ads.html#queue_pack_contract.ads:20:43" title="defined at queue_pack_contract.ads:20:43">Q</a>), Post => <span class="keyword">not</span> <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:26:13" title="defined at queue_pack_contract.ads:26:13">Is_Full</a> (<a href="queue_pack_contract.ads.html#queue_pack_contract.ads:20:43" title="defined at queue_pack_contract.ads:20:43">Q</a>) <span class="keyword">and</span> <span class="keyword">then</span> <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:27:13" title="defined at queue_pack_contract.ads:27:13">Length</a> (<a href="queue_pack_contract.ads.html#queue_pack_contract.ads:20:43" title="defined at queue_pack_contract.ads:20:43">Q</a>) = <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:27:13" title="defined at queue_pack_contract.ads:27:13">Length</a> (<a href="queue_pack_contract.ads.html#queue_pack_contract.ads:20:43" title="defined at queue_pack_contract.ads:20:43">Q</a>'Old) - 1 <span class="keyword">and</span> <span class="keyword">then</span> (<span class="keyword">for</span> <span class="keyword">all</span> ix <span class="keyword">in</span> 1 .. <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:27:13" title="defined at queue_pack_contract.ads:27:13">Length</a> (<a href="queue_pack_contract.ads.html#queue_pack_contract.ads:20:43" title="defined at queue_pack_contract.ads:20:43">Q</a>) => <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:28:13" title="defined at queue_pack_contract.ads:28:13">Lookahead</a> (<a href="queue_pack_contract.ads.html#queue_pack_contract.ads:20:43" title="defined at queue_pack_contract.ads:20:43">Q</a>, ix) = <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:28:13" title="defined at queue_pack_contract.ads:28:13">Lookahead</a> (<a href="queue_pack_contract.ads.html#queue_pack_contract.ads:20:43" title="defined at queue_pack_contract.ads:20:43">Q</a>'Old, ix + 1));</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_queue_pack_contract.ads.html#l20" title="queue_pack_contract.ads:20:14">queue_pack_contract.ads:20:14</a> (declaration)</i></div>
+            <div><i><a href="src_queue_pack_contract.adb.html#l15" title="queue_pack_contract.adb:15:14">queue_pack_contract.adb:15:14</a> (body)</i></div>
+            <div><i><a href="src_queue_pack_contract.adb.html#l21" title="queue_pack_contract.adb:21:8">queue_pack_contract.adb:21:8</a> (label)</i></div>
+            <div><i><a href="src_queue_test_contract.adb.html#l20" title="queue_test_contract.adb:20:4">queue_test_contract.adb:20:4</a> (call)</i></div>
+            <div><i><a href="src_queue_test_contract.adb.html#l21" title="queue_test_contract.adb:21:4">queue_test_contract.adb:21:4</a> (call)</i></div>
+            <div><i><a href="src_queue_test_contract.adb.html#l22" title="queue_test_contract.adb:22:4">queue_test_contract.adb:22:4</a> (call)</i></div>
+            <div><i><a href="src_queue_test_contract.adb.html#l24" title="queue_test_contract.adb:24:4">queue_test_contract.adb:24:4</a> (call)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="queue_test_contract.adb.html#queue_test_contract.adb:10:11" title="defined at queue_test_contract.adb:10:11">Queue_Test_Contract</a> defined at <a href="src_queue_test_contract.adb.html#l10" title="queue_test_contract.adb:10:11">queue_test_contract.adb:10:11</a></i></div>
+            <div><i><a href="queue_test_contract.adb.html#queue_test_contract.adb:10:11" title="defined at queue_test_contract.adb:10:11">Queue_Test_Contract</a> defined at <a href="src_queue_test_contract.adb.html#l10" title="queue_test_contract.adb:10:11">queue_test_contract.adb:10:11</a></i></div>
+            <div><i><a href="queue_test_contract.adb.html#queue_test_contract.adb:10:11" title="defined at queue_test_contract.adb:10:11">Queue_Test_Contract</a> defined at <a href="src_queue_test_contract.adb.html#l10" title="queue_test_contract.adb:10:11">queue_test_contract.adb:10:11</a></i></div>
+            <div><i><a href="queue_test_contract.adb.html#queue_test_contract.adb:10:11" title="defined at queue_test_contract.adb:10:11">Queue_Test_Contract</a> defined at <a href="src_queue_test_contract.adb.html#l10" title="queue_test_contract.adb:10:11">queue_test_contract.adb:10:11</a></i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='queue_pack_contract.ads:25:13' id='queue_pack_contract.ads:25:13'></a>
+<span class="droplink">Is_Empty<ul>
+  <li><a href="src_queue_pack_contract.ads.html#l25">Goto spec in source</a></li>
+  <li><a href="src_queue_pack_contract.ads.html#l40">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Is_Empty</span>  <table><tr><td>(</td><td><span class="name"><a name="queue_pack_contract.ads:25:24"></a>Q</span></td><td>: <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:12:9" title="defined at queue_pack_contract.ads:12:9">Queue_Type</a>) <span class="keyword">return</span> Boolean;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_queue_pack_contract.ads.html#l25" title="queue_pack_contract.ads:25:13">queue_pack_contract.ads:25:13</a> (declaration)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l16" title="queue_pack_contract.ads:16:18">queue_pack_contract.ads:16:18</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l21" title="queue_pack_contract.ads:21:18">queue_pack_contract.ads:21:18</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l40" title="queue_pack_contract.ads:40:13">queue_pack_contract.ads:40:13</a> (body)</i></div>
+            <div><i><a href="src_queue_test_contract.adb.html#l27" title="queue_test_contract.adb:27:58">queue_test_contract.adb:27:58</a> (call)</i></div>
+        </div>
+        <div class='profile'>
+          <h4>Called by:</h4>
+            <div><i><a href="queue_test_contract.adb.html#queue_test_contract.adb:10:11" title="defined at queue_test_contract.adb:10:11">Queue_Test_Contract</a> defined at <a href="src_queue_test_contract.adb.html#l10" title="queue_test_contract.adb:10:11">queue_test_contract.adb:10:11</a></i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='queue_pack_contract.ads:26:13' id='queue_pack_contract.ads:26:13'></a>
+<span class="droplink">Is_Full<ul>
+  <li><a href="src_queue_pack_contract.ads.html#l26">Goto spec in source</a></li>
+  <li><a href="src_queue_pack_contract.ads.html#l43">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Is_Full</span>   <table><tr><td>(</td><td><span class="name"><a name="queue_pack_contract.ads:26:24"></a>Q</span></td><td>: <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:12:9" title="defined at queue_pack_contract.ads:12:9">Queue_Type</a>) <span class="keyword">return</span> Boolean;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_queue_pack_contract.ads.html#l26" title="queue_pack_contract.ads:26:13">queue_pack_contract.ads:26:13</a> (declaration)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l15" title="queue_pack_contract.ads:15:18">queue_pack_contract.ads:15:18</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l22" title="queue_pack_contract.ads:22:18">queue_pack_contract.ads:22:18</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l43" title="queue_pack_contract.ads:43:13">queue_pack_contract.ads:43:13</a> (body)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l47" title="queue_pack_contract.ads:47:10">queue_pack_contract.ads:47:10</a> (call)</i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='queue_pack_contract.ads:27:13' id='queue_pack_contract.ads:27:13'></a>
+<span class="droplink">Length<ul>
+  <li><a href="src_queue_pack_contract.ads.html#l27">Goto spec in source</a></li>
+  <li><a href="src_queue_pack_contract.ads.html#l46">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Length</span>    <table><tr><td>(</td><td><span class="name"><a name="queue_pack_contract.ads:27:24"></a>Q</span></td><td>: <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:12:9" title="defined at queue_pack_contract.ads:12:9">Queue_Type</a>) <span class="keyword">return</span> Natural;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_queue_pack_contract.ads.html#l27" title="queue_pack_contract.ads:27:13">queue_pack_contract.ads:27:13</a> (declaration)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l16" title="queue_pack_contract.ads:16:40">queue_pack_contract.ads:16:40</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l16" title="queue_pack_contract.ads:16:53">queue_pack_contract.ads:16:53</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l17" title="queue_pack_contract.ads:17:40">queue_pack_contract.ads:17:40</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l18" title="queue_pack_contract.ads:18:46">queue_pack_contract.ads:18:46</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l22" title="queue_pack_contract.ads:22:39">queue_pack_contract.ads:22:39</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l22" title="queue_pack_contract.ads:22:52">queue_pack_contract.ads:22:52</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l23" title="queue_pack_contract.ads:23:46">queue_pack_contract.ads:23:46</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l38" title="queue_pack_contract.ads:38:35">queue_pack_contract.ads:38:35</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l46" title="queue_pack_contract.ads:46:13">queue_pack_contract.ads:46:13</a> (body)</i></div>
+        </div>
+      </div>
+      <div class="class">
+        <h3>
+          <a name='queue_pack_contract.ads:28:13' id='queue_pack_contract.ads:28:13'></a>
+<span class="droplink">Lookahead<ul>
+  <li><a href="src_queue_pack_contract.ads.html#l28">Goto spec in source</a></li>
+  <li><a href="src_queue_pack_contract.ads.html#l49">Goto body in source</a></li>
+</ul></span>
+        </h3>
+        <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Lookahead</span> <table><tr><td>(</td><td><span class="name"><a name="queue_pack_contract.ads:28:24"></a>Q</span></td><td>: <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:12:9" title="defined at queue_pack_contract.ads:12:9">Queue_Type</a>;</td></tr><tr><td></td><td><span class="name"><a name="queue_pack_contract.ads:28:40"></a>Depth</span></td><td>: Positive) <span class="keyword">return</span> <a href="queue_pack_contract.ads.html#queue_pack_contract.ads:10:9" title="defined at queue_pack_contract.ads:10:9">Element</a>;</td></tr></table></pre></div>
+        <div class='profile'>
+          <h4>References:</h4>
+            <div><i><a href="src_queue_pack_contract.ads.html#l28" title="queue_pack_contract.ads:28:13">queue_pack_contract.ads:28:13</a> (declaration)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l17" title="queue_pack_contract.ads:17:26">queue_pack_contract.ads:17:26</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l18" title="queue_pack_contract.ads:18:64">queue_pack_contract.ads:18:64</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l18" title="queue_pack_contract.ads:18:84">queue_pack_contract.ads:18:84</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l23" title="queue_pack_contract.ads:23:60">queue_pack_contract.ads:23:60</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l23" title="queue_pack_contract.ads:23:80">queue_pack_contract.ads:23:80</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l38" title="queue_pack_contract.ads:38:58">queue_pack_contract.ads:38:58</a> (call)</i></div>
+            <div><i><a href="src_queue_pack_contract.ads.html#l49" title="queue_pack_contract.ads:49:13">queue_pack_contract.ads:49:13</a> (body)</i></div>
+        </div>
+      </div>
+    </div>
+</div> <!-- documentation -->
+
+</body>
+</html>

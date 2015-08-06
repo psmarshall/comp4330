@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>
+    Package: Queue_Pack_Task_Generic (generic)
+  </title>
+  <link rel='stylesheet' href='support/docgen.css' type='text/css'/>
+  <link rel='stylesheet' href='support/tags.css' type='text/css'/>
+  <script src='support/docgen.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body onload="onloadDoc();">
+
+<div id='leftSide'>
+  <div id='leftSideInside'>
+  <div id='header'>
+    <h2 class="button">Documentation</h2>
+    <a href='toc.html'><div class="button2">Table of Contents</div></a>
+
+    <a href='tree.html'><div class="button2">Class Inheritance Tree</div></a>
+
+  </div>
+
+  <div id='navigation'>
+    <h2 class="button">Navigation</h2>
+    <a href='#Description'><div class="button2">Description</div></a>
+    <a href='#Packages'><div class="button2">Packages</div></a>
+    <a href='#Tasks'><div class="button2">Tasks &amp; Protected</div></a>
+    <a href='#Constants'><div class="button2">Constants &amp; Global variables</div></a>
+  </div><!-- navigation -->
+  </div>
+</div> <!-- leftSide -->
+
+<div class='default' id='rightSide'>
+ <div id='rightSideInside'>
+ <div id='Index'>
+  <h2>Index</h2>
+  <script type="text/javascript">
+    var names = new Array (
+new Array ('Queue_<wbr/>Instance', 'queue_pack_task_generic.ads:8:17', 'package-spec'),
+new Array ('Queue_<wbr/>Task', 'queue_pack_task_generic.ads:15:14', 'var-spec'),
+new Array ('Queue_<wbr/>Size', 'queue_pack_task_generic.ads:9:4', 'var-spec'),
+new Array ('Queue_<wbr/>Task.<wbr/>Enqueue (abstract)', 'queue_pack_task_generic.ads:17:24', 'subp-spec'),
+new Array ('Queue_<wbr/>Task.<wbr/>Dequeue (abstract)', 'queue_pack_task_generic.ads:18:24', 'subp-spec'),
+new Array ('Queue_<wbr/>Task.<wbr/>Is_<wbr/>Empty (abstract)', 'queue_pack_task_generic.ads:20:13', 'subp-spec'),
+new Array ('Queue_<wbr/>Task.<wbr/>Is_<wbr/>Full (abstract)', 'queue_pack_task_generic.ads:21:13', 'subp-spec'),
+      new Array ('dummy', '', ''));
+    printIndexList (names);
+  </script>
+  <noscript>
+    <ul>
+      <li class='package-spec'><a href="#queue_pack_task_generic.ads:8:17">Queue_<wbr/>Instance</a></li>
+      <li class='task-spec'><a href="#queue_pack_task_generic.ads:15:14">Queue_<wbr/>Task</a></li>
+      <li class='var-spec'><a href="#queue_pack_task_generic.ads:9:4">Queue_<wbr/>Size</a></li>
+        <li class='subp-spec'><a href="#queue_pack_task_generic.ads:17:24">Enqueue (abstract)</a></li>
+        <li class='subp-spec'><a href="#queue_pack_task_generic.ads:18:24">Dequeue (abstract)</a></li>
+        <li class='subp-spec'><a href="#queue_pack_task_generic.ads:20:13">Is_<wbr/>Empty (abstract)</a></li>
+        <li class='subp-spec'><a href="#queue_pack_task_generic.ads:21:13">Is_<wbr/>Full (abstract)</a></li>
+    </ul>
+  </noscript>
+ </div>
+ </div>
+</div>
+
+<div class='default' id='documentation'>
+  <div class='title'>
+    Package:
+<span class="droplink"><i>Queue_Pack_Task_Generic (generic)</i><ul>
+  <li><a href="src_queue_pack_task_generic.ads.html">Goto spec source</a></li>
+  <li><a href="src_queue_pack_task_generic.adb.html">Goto body source</a></li>
+</ul></span>
+  </div>
+  <div class='subprograms'>
+    <h1><a name='Description' id='Description'></a>Description</h1>
+    <div class="class">
+    <div class='details'><pre><span class="keyword">generic</span>
+   <span class="keyword">with</span> <span class="keyword">package</span> <span class="name"><a name="queue_pack_task_generic.ads:8:17"></a>Queue_Instance</span> <span class="keyword">is</span></pre></div>
+    <div class='comment'>
+Uwe R. Zimmer, Australia, 2013
+
+</div>
+    </div>
+  </div>
+
+  <div class='subprograms'>
+    <h1><a name='Packages' id='Packages'></a>Packages</h1>
+    <div class="class">
+      <h3>
+        <a name='queue_pack_task_generic.ads:8:17' id='queue_pack_task_generic.ads:8:17'></a>
+        Queue_Instance
+        <span class='type'>(new <a href="queue_pack_abstract.ads.html#queue_pack_abstract.ads:9:9" title="defined at queue_pack_abstract.ads:9:9">Queue_Pack_Abstract</a>)</span>
+      </h3>
+        <div class='details'><pre><span class="keyword">package</span> <span class="name_emphasis">Queue_Instance</span> <span class="keyword">is</span> <span class="keyword">new</span> <a href="queue_pack_abstract.ads.html#queue_pack_abstract.ads:9:9" title="defined at queue_pack_abstract.ads:9:9">Queue_Pack_Abstract</a> (<>);</pre></div>
+    </div>
+  </div>
+
+
+  <div class='subprograms'>
+    <h1><a name='Tasks' id='Tasks'></a>Tasks &amp; Protected</h1>
+    <div class="class">
+      <h3>
+        <a name='queue_pack_task_generic.ads:15:14' id='queue_pack_task_generic.ads:15:14'></a>
+<span class="droplink">Queue_Task<ul>
+  <li><a href="src_queue_pack_task_generic.ads.html#l15">Goto spec in source</a></li>
+  <li><a href="src_queue_pack_task_generic.adb.html#l7">Goto body in source</a></li>
+</ul></span>
+         (task type)
+      </h3>
+      <div class="details"><b>Entries:</b><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:17:24" title="Enqueue">Enqueue</a>, <a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:18:24" title="Dequeue">Dequeue</a>, <a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:20:13" title="Is_Empty">Is_Empty</a>, <a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:21:13" title="Is_Full">Is_Full</a></div>
+      <div class='profile'>
+          <h4>References:</h4>
+          <div><i><a href="src_queue_pack_task_generic.ads.html#l15" title="queue_pack_task_generic.ads:15:14">queue_pack_task_generic.ads:15:14</a> (declaration)</i></div>
+          <div><i><a href="src_queue_pack_task_generic.adb.html#l7" title="queue_pack_task_generic.adb:7:14">queue_pack_task_generic.adb:7:14</a> (body)</i></div>
+          <div><i><a href="src_queue_pack_task_generic.adb.html#l54" title="queue_pack_task_generic.adb:54:8">queue_pack_task_generic.adb:54:8</a> (label)</i></div>
+          <div><i><a href="src_queue_pack_task_generic.ads.html#l23" title="queue_pack_task_generic.ads:23:8">queue_pack_task_generic.ads:23:8</a> (label)</i></div>
+          <div><i><a href="src_queue_test_dispatching_tasks.adb.html#l31" title="queue_test_dispatching_tasks.adb:31:49">queue_test_dispatching_tasks.adb:31:49</a> (reference)</i></div>
+          <div><i><a href="src_queue_test_dispatching_tasks.adb.html#l42" title="queue_test_dispatching_tasks.adb:42:49">queue_test_dispatching_tasks.adb:42:49</a> (reference)</i></div>
+      </div>
+      <div class='profile'>
+          <h4>Called by:</h4>
+          <div><i><a href="queue_test_dispatching_tasks.adb.html#queue_test_dispatching_tasks.adb:23:9" title="defined at queue_test_dispatching_tasks.adb:23:9">Queue_Test_Dispatching_Tasks.Queue_Holder</a> defined at <a href="src_queue_test_dispatching_tasks.adb.html#l23" title="queue_test_dispatching_tasks.adb:23:9">queue_test_dispatching_tasks.adb:23:9</a></i></div>
+          <div><i><a href="queue_test_dispatching_tasks.adb.html#queue_test_dispatching_tasks.adb:25:9" title="defined at queue_test_dispatching_tasks.adb:25:9">Queue_Test_Dispatching_Tasks.Queue_User</a> defined at <a href="src_queue_test_dispatching_tasks.adb.html#l25" title="queue_test_dispatching_tasks.adb:25:9">queue_test_dispatching_tasks.adb:25:9</a></i></div>
+      </div>
+      <div class='profile'>
+          <h4>Calls:</h4>
+          <div><i><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:18:24" title="defined at queue_pack_task_generic.ads:18:24">Dequeue</a> defined at <a href="src_queue_pack_task_generic.ads.html#l18" title="queue_pack_task_generic.ads:18:24">queue_pack_task_generic.ads:18:24</a></i></div>
+          <div><i><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:17:24" title="defined at queue_pack_task_generic.ads:17:24">Enqueue</a> defined at <a href="src_queue_pack_task_generic.ads.html#l17" title="queue_pack_task_generic.ads:17:24">queue_pack_task_generic.ads:17:24</a></i></div>
+          <div><i><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:20:13" title="defined at queue_pack_task_generic.ads:20:13">Is_Empty</a> defined at <a href="src_queue_pack_task_generic.ads.html#l20" title="queue_pack_task_generic.ads:20:13">queue_pack_task_generic.ads:20:13</a></i></div>
+          <div><i><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:21:13" title="defined at queue_pack_task_generic.ads:21:13">Is_Full</a> defined at <a href="src_queue_pack_task_generic.ads.html#l21" title="queue_pack_task_generic.ads:21:13">queue_pack_task_generic.ads:21:13</a></i></div>
+          <div><i><a href="queue_pack_task_generic.adb.html#queue_pack_task_generic.adb:20:16" title="defined at queue_pack_task_generic.adb:20:16">Queue_Pack_Task_Generic.Queue_Task.Is_Empty</a> defined at <a href="src_queue_pack_task_generic.adb.html#l20" title="queue_pack_task_generic.adb:20:16">queue_pack_task_generic.adb:20:16</a></i></div>
+          <div><i><a href="queue_pack_task_generic.adb.html#queue_pack_task_generic.adb:23:16" title="defined at queue_pack_task_generic.adb:23:16">Queue_Pack_Task_Generic.Queue_Task.Is_Full</a> defined at <a href="src_queue_pack_task_generic.adb.html#l23" title="queue_pack_task_generic.adb:23:16">queue_pack_task_generic.adb:23:16</a></i></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class='subprograms'>
+    <h1><a name='Constants' id='Constants'></a>Constants &amp; Global variables</h1>
+    <div class="class">
+      <h3><a name='queue_pack_task_generic.ads:9:4' id='queue_pack_task_generic.ads:9:4'></a>
+<span class="droplink">Queue_Size<ul>
+  <li><a href="src_queue_pack_task_generic.ads.html#l9">Goto declaration in source</a></li>
+</ul></span>
+        <span class="type">(Positive)</span>
+      </h3>
+      <div class='details'><pre><span class="name_emphasis">Queue_Size</span> : Positive := 10;</pre></div>
+      <div class='profile'>
+        <h4>References:</h4>
+          <div><i><a href="src_queue_pack_task_generic.ads.html#l9" title="queue_pack_task_generic.ads:9:4">queue_pack_task_generic.ads:9:4</a> (declaration)</i></div>
+          <div><i><a href="src_queue_pack_task_generic.adb.html#l9" title="queue_pack_task_generic.adb:9:44">queue_pack_task_generic.adb:9:44</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_task_generic.adb.html#l33" title="queue_pack_task_generic.adb:33:55">queue_pack_task_generic.adb:33:55</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_task_generic.adb.html#l40" title="queue_pack_task_generic.adb:40:54">queue_pack_task_generic.adb:40:54</a> (reference)</i></div>
+      </div>
+    </div>
+  </div>
+
+    <div class='subprograms'>
+      <h1><a name='Methods' id='Methods'></a>Subprograms &amp; Entries</h1>
+        <div class='class'>
+          <div>
+            <h3>
+              <a name='queue_pack_task_generic.ads:17:24' id='queue_pack_task_generic.ads:17:24'></a>
+              <span class="type"><a href="#queue_pack_task_generic.ads:15:14">Queue_Task</a></span>.
+<span class="droplink">Enqueue (abstract)<ul>
+  <li><a href="src_queue_pack_task_generic.ads.html#l17">Goto spec in source</a></li>
+  <li><a href="src_queue_pack_task_generic.adb.html#l30">Goto body in source</a></li>
+</ul></span>
+            </h3>
+            <div class='details'><pre><span class="keyword">overriding</span> <span class="keyword">entry</span> <span class="name_emphasis">Enqueue</span> <table><tr><td>(</td><td><span class="name"><a name="queue_pack_task_generic.ads:17:33"></a>Item</span></td><td>:     <a href="queue_pack_abstract.ads.html#queue_pack_abstract.ads:7:9" title="defined at queue_pack_abstract.ads:7:9">Element</a>);</td></tr></table></pre></div>
+            <div class='profile'>
+              <h4>References:</h4>
+                <div><i><a href="src_queue_pack_task_generic.ads.html#l17" title="queue_pack_task_generic.ads:17:24">queue_pack_task_generic.ads:17:24</a> (declaration)</i></div>
+                <div><i><a href="src_queue_pack_task_generic.adb.html#l30" title="queue_pack_task_generic.adb:30:23">queue_pack_task_generic.adb:30:23</a> (body)</i></div>
+                <div><i><a href="src_queue_pack_task_generic.adb.html#l32" title="queue_pack_task_generic.adb:32:20">queue_pack_task_generic.adb:32:20</a> (label)</i></div>
+            </div>
+            <div class='profile'>
+              <h4>Called by:</h4>
+                <div><i><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:15:14" title="defined at queue_pack_task_generic.ads:15:14">Queue_Task</a> defined at <a href="src_queue_pack_task_generic.ads.html#l15" title="queue_pack_task_generic.ads:15:14">queue_pack_task_generic.ads:15:14</a></i></div>
+                <div><i><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:15:14" title="defined at queue_pack_task_generic.ads:15:14">Queue_Task</a> defined at <a href="src_queue_pack_task_generic.ads.html#l15" title="queue_pack_task_generic.ads:15:14">queue_pack_task_generic.ads:15:14</a></i></div>
+            </div>
+          </div>
+        </div>
+        <div class='class'>
+          <div>
+            <h3>
+              <a name='queue_pack_task_generic.ads:18:24' id='queue_pack_task_generic.ads:18:24'></a>
+              <span class="type"><a href="#queue_pack_task_generic.ads:15:14">Queue_Task</a></span>.
+<span class="droplink">Dequeue (abstract)<ul>
+  <li><a href="src_queue_pack_task_generic.ads.html#l18">Goto spec in source</a></li>
+  <li><a href="src_queue_pack_task_generic.adb.html#l37">Goto body in source</a></li>
+</ul></span>
+            </h3>
+            <div class='details'><pre><span class="keyword">overriding</span> <span class="keyword">entry</span> <span class="name_emphasis">Dequeue</span> <table><tr><td>(</td><td><span class="name"><a name="queue_pack_task_generic.ads:18:33"></a>Item</span></td><td>: <span class="keyword">out</span> <a href="queue_pack_abstract.ads.html#queue_pack_abstract.ads:7:9" title="defined at queue_pack_abstract.ads:7:9">Element</a>);</td></tr></table></pre></div>
+            <div class='profile'>
+              <h4>References:</h4>
+                <div><i><a href="src_queue_pack_task_generic.ads.html#l18" title="queue_pack_task_generic.ads:18:24">queue_pack_task_generic.ads:18:24</a> (declaration)</i></div>
+                <div><i><a href="src_queue_pack_task_generic.adb.html#l37" title="queue_pack_task_generic.adb:37:23">queue_pack_task_generic.adb:37:23</a> (body)</i></div>
+                <div><i><a href="src_queue_pack_task_generic.adb.html#l39" title="queue_pack_task_generic.adb:39:20">queue_pack_task_generic.adb:39:20</a> (label)</i></div>
+            </div>
+            <div class='profile'>
+              <h4>Called by:</h4>
+                <div><i><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:15:14" title="defined at queue_pack_task_generic.ads:15:14">Queue_Task</a> defined at <a href="src_queue_pack_task_generic.ads.html#l15" title="queue_pack_task_generic.ads:15:14">queue_pack_task_generic.ads:15:14</a></i></div>
+                <div><i><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:15:14" title="defined at queue_pack_task_generic.ads:15:14">Queue_Task</a> defined at <a href="src_queue_pack_task_generic.ads.html#l15" title="queue_pack_task_generic.ads:15:14">queue_pack_task_generic.ads:15:14</a></i></div>
+            </div>
+          </div>
+        </div>
+        <div class='class'>
+          <div>
+            <h3>
+              <a name='queue_pack_task_generic.ads:20:13' id='queue_pack_task_generic.ads:20:13'></a>
+              <span class="type"><a href="#queue_pack_task_generic.ads:15:14">Queue_Task</a></span>.
+<span class="droplink">Is_Empty (abstract)<ul>
+  <li><a href="src_queue_pack_task_generic.ads.html#l20">Goto spec in source</a></li>
+  <li><a href="src_queue_pack_task_generic.adb.html#l43">Goto body in source</a></li>
+</ul></span>
+            </h3>
+            <div class='details'><pre><span class="keyword">entry</span> <span class="name_emphasis">Is_Empty</span> <table><tr><td>(</td><td><span class="name"><a name="queue_pack_task_generic.ads:20:23"></a>Result</span></td><td>: <span class="keyword">out</span> Boolean);</td></tr></table></pre></div>
+            <div class='profile'>
+              <h4>References:</h4>
+                <div><i><a href="src_queue_pack_task_generic.ads.html#l20" title="queue_pack_task_generic.ads:20:13">queue_pack_task_generic.ads:20:13</a> (declaration)</i></div>
+                <div><i><a href="src_queue_pack_task_generic.adb.html#l43" title="queue_pack_task_generic.adb:43:20">queue_pack_task_generic.adb:43:20</a> (body)</i></div>
+                <div><i><a href="src_queue_pack_task_generic.adb.html#l45" title="queue_pack_task_generic.adb:45:17">queue_pack_task_generic.adb:45:17</a> (label)</i></div>
+            </div>
+            <div class='profile'>
+              <h4>Called by:</h4>
+                <div><i><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:15:14" title="defined at queue_pack_task_generic.ads:15:14">Queue_Task</a> defined at <a href="src_queue_pack_task_generic.ads.html#l15" title="queue_pack_task_generic.ads:15:14">queue_pack_task_generic.ads:15:14</a></i></div>
+                <div><i><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:15:14" title="defined at queue_pack_task_generic.ads:15:14">Queue_Task</a> defined at <a href="src_queue_pack_task_generic.ads.html#l15" title="queue_pack_task_generic.ads:15:14">queue_pack_task_generic.ads:15:14</a></i></div>
+            </div>
+          </div>
+        </div>
+        <div class='class'>
+          <div>
+            <h3>
+              <a name='queue_pack_task_generic.ads:21:13' id='queue_pack_task_generic.ads:21:13'></a>
+              <span class="type"><a href="#queue_pack_task_generic.ads:15:14">Queue_Task</a></span>.
+<span class="droplink">Is_Full (abstract)<ul>
+  <li><a href="src_queue_pack_task_generic.ads.html#l21">Goto spec in source</a></li>
+  <li><a href="src_queue_pack_task_generic.adb.html#l47">Goto body in source</a></li>
+</ul></span>
+            </h3>
+            <div class='details'><pre><span class="keyword">entry</span> <span class="name_emphasis">Is_Full</span>  <table><tr><td>(</td><td><span class="name"><a name="queue_pack_task_generic.ads:21:23"></a>Result</span></td><td>: <span class="keyword">out</span> Boolean);</td></tr></table></pre></div>
+            <div class='profile'>
+              <h4>References:</h4>
+                <div><i><a href="src_queue_pack_task_generic.ads.html#l21" title="queue_pack_task_generic.ads:21:13">queue_pack_task_generic.ads:21:13</a> (declaration)</i></div>
+                <div><i><a href="src_queue_pack_task_generic.adb.html#l47" title="queue_pack_task_generic.adb:47:20">queue_pack_task_generic.adb:47:20</a> (body)</i></div>
+                <div><i><a href="src_queue_pack_task_generic.adb.html#l49" title="queue_pack_task_generic.adb:49:17">queue_pack_task_generic.adb:49:17</a> (label)</i></div>
+            </div>
+            <div class='profile'>
+              <h4>Called by:</h4>
+                <div><i><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:15:14" title="defined at queue_pack_task_generic.ads:15:14">Queue_Task</a> defined at <a href="src_queue_pack_task_generic.ads.html#l15" title="queue_pack_task_generic.ads:15:14">queue_pack_task_generic.ads:15:14</a></i></div>
+                <div><i><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:15:14" title="defined at queue_pack_task_generic.ads:15:14">Queue_Task</a> defined at <a href="src_queue_pack_task_generic.ads.html#l15" title="queue_pack_task_generic.ads:15:14">queue_pack_task_generic.ads:15:14</a></i></div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div> <!-- documentation -->
+
+</body>
+</html>

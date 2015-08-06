@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>
+    File: queue_pack_task_generic.ads
+  </title>
+  <link rel='stylesheet' href='support/docgen.css' type='text/css'/>
+  <link rel='stylesheet' href='support/tags.css' type='text/css'/>
+  <script src='support/docgen.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body onload="onloadDoc();">
+
+<div id='leftSide'>
+  <div id='leftSideInside'>
+  <div id='header'>
+    <h2 class="button">Documentation</h2>
+    <a href='toc.html'><div class="button2">Table of Contents</div></a>
+
+    <a href='tree.html'><div class="button2">Class Inheritance Tree</div></a>
+
+  </div>
+  </div>
+</div> <!-- leftSide -->
+
+<div class='subprograms'>
+  <div class='details'><ol><li id="l1"><pre><span class="comment">--</span> </pre></li>
+<li id="l2"><pre><span class="comment">-- Uwe R. Zimmer, Australia, 2013</span> </pre></li>
+<li id="l3"><pre><span class="comment">--</span> </pre></li>
+<li id="l4"><pre> </pre></li>
+<li id="l5"><pre><span class="keyword">with</span> <span class="droplink">Queue_Pack_Abstract<ul><li><a href="queue_pack_abstract.ads.html#queue_pack_abstract.ads:9:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_abstract.ads.html#l9" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l6"><pre> </pre></li>
+<li id="l7"><pre><span class="keyword">generic</span> </pre></li>
+<li id="l8"><pre>   <span class="keyword">with</span> <span class="keyword">package</span> <a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:8:17" title="defined at queue_pack_task_generic.ads:8:17">Queue_Instance</a> <span class="keyword">is</span> <span class="keyword">new</span> <span class="droplink">Queue_Pack_Abstract<ul><li><a href="queue_pack_abstract.ads.html#queue_pack_abstract.ads:9:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_abstract.ads.html#l9" title="To spec">To spec</a></li></ul></span> (&lt;&gt;); </pre></li>
+<li id="l9"><pre>   <a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:9:4" title="defined at queue_pack_task_generic.ads:9:4">Queue_Size</a> : Positive := 10; </pre></li>
+<li id="l10"><pre> </pre></li>
+<li id="l11"><pre><span class="keyword">package</span> <span class="droplink">Queue_Pack_Task_Generic<ul><li><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_task_generic.adb.html#l5" title="To body">To body</a></li></ul></span> <span class="keyword">is</span> </pre></li>
+<li id="l12"><pre> </pre></li>
+<li id="l13"><pre>   <span class="keyword">use</span> <span class="droplink">Queue_Instance<ul><li><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:8:17" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_task_generic.ads.html#l8" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l14"><pre> </pre></li>
+<li id="l15"><pre>   <span class="keyword">task</span> <span class="keyword">type</span> <span class="droplink">Queue_Task<ul><li><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:15:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_task_generic.adb.html#l7" title="To body">To body</a></li></ul></span> <span class="keyword">is</span> <span class="keyword">new</span> <span class="droplink">Queue_Interface<ul><li><a href="queue_pack_abstract.ads.html#queue_pack_abstract.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_abstract.ads.html#l11" title="To spec">To spec</a></li></ul></span> <span class="keyword">with</span> </pre></li>
+<li id="l16"><pre> </pre></li>
+<li id="l17"><pre>      <span class="keyword">overriding</span> <span class="keyword">entry</span> <span class="droplink">Enqueue<ul><li><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:17:24" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_task_generic.adb.html#l30" title="To body">To body</a></li></ul></span> (<a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:17:33" title="defined at queue_pack_task_generic.ads:17:33">Item</a> :     <span class="droplink">Element<ul><li><a href="queue_pack_abstract.ads.html#queue_pack_abstract.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_abstract.ads.html#l7" title="To spec">To spec</a></li></ul></span>); </pre></li>
+<li id="l18"><pre>      <span class="keyword">overriding</span> <span class="keyword">entry</span> <span class="droplink">Dequeue<ul><li><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:18:24" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_task_generic.adb.html#l37" title="To body">To body</a></li></ul></span> (<a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:18:33" title="defined at queue_pack_task_generic.ads:18:33">Item</a> : <span class="keyword">out</span> <span class="droplink">Element<ul><li><a href="queue_pack_abstract.ads.html#queue_pack_abstract.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_abstract.ads.html#l7" title="To spec">To spec</a></li></ul></span>); </pre></li>
+<li id="l19"><pre> </pre></li>
+<li id="l20"><pre>      <span class="keyword">entry</span> <span class="droplink">Is_Empty<ul><li><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:20:13" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_task_generic.adb.html#l43" title="To body">To body</a></li></ul></span> (<a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:20:23" title="defined at queue_pack_task_generic.ads:20:23">Result</a> : <span class="keyword">out</span> Boolean); </pre></li>
+<li id="l21"><pre>      <span class="keyword">entry</span> <span class="droplink">Is_Full<ul><li><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:21:13" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_task_generic.adb.html#l47" title="To body">To body</a></li></ul></span>  (<a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:21:23" title="defined at queue_pack_task_generic.ads:21:23">Result</a> : <span class="keyword">out</span> Boolean); </pre></li>
+<li id="l22"><pre> </pre></li>
+<li id="l23"><pre>   <span class="keyword">end</span> <span class="droplink">Queue_Task<ul><li><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:15:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_task_generic.ads.html#l15" title="To spec">To spec</a></li><li><a href="src_queue_pack_task_generic.adb.html#l7" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l24"><pre> </pre></li>
+<li id="l25"><pre><span class="keyword">end</span> <span class="droplink">Queue_Pack_Task_Generic<ul><li><a href="queue_pack_task_generic.ads.html#queue_pack_task_generic.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_task_generic.ads.html#l11" title="To spec">To spec</a></li><li><a href="src_queue_pack_task_generic.adb.html#l5" title="To body">To body</a></li></ul></span>; </pre></li>
+</ol></div>
+</div>
+
+</body>
+</html>

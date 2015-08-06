@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>
+    File: queues_pack_protected_generic.ads
+  </title>
+  <link rel='stylesheet' href='support/docgen.css' type='text/css'/>
+  <link rel='stylesheet' href='support/tags.css' type='text/css'/>
+  <script src='support/docgen.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body onload="onloadDoc();">
+
+<div id='leftSide'>
+  <div id='leftSideInside'>
+  <div id='header'>
+    <h2 class="button">Documentation</h2>
+    <a href='toc.html'><div class="button2">Table of Contents</div></a>
+
+    <a href='tree.html'><div class="button2">Class Inheritance Tree</div></a>
+
+  </div>
+  </div>
+</div> <!-- leftSide -->
+
+<div class='subprograms'>
+  <div class='details'><ol><li id="l1"><pre><span class="comment">--</span> </pre></li>
+<li id="l2"><pre><span class="comment">-- Uwe R. Zimmer, Australia, 2013</span> </pre></li>
+<li id="l3"><pre><span class="comment">--</span> </pre></li>
+<li id="l4"><pre> </pre></li>
+<li id="l5"><pre><span class="keyword">generic</span> </pre></li>
+<li id="l6"><pre>   <span class="keyword">type</span> <a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:6:9" title="defined at queues_pack_protected_generic.ads:6:9">Element</a> <span class="keyword">is</span> <span class="keyword">private</span>; </pre></li>
+<li id="l7"><pre>   <span class="keyword">type</span> <a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:7:9" title="defined at queues_pack_protected_generic.ads:7:9">Queue_Enum</a> <span class="keyword">is</span> (&lt;&gt;); </pre></li>
+<li id="l8"><pre>   <a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:8:4" title="defined at queues_pack_protected_generic.ads:8:4">Queue_Size</a> : Positive; </pre></li>
+<li id="l9"><pre> </pre></li>
+<li id="l10"><pre><span class="keyword">package</span> <span class="droplink">Queues_Pack_Protected_Generic<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:10:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.adb.html#l5" title="To body">To body</a></li></ul></span> <span class="keyword">is</span> </pre></li>
+<li id="l11"><pre> </pre></li>
+<li id="l12"><pre>   <span class="keyword">type</span> <span class="droplink">Queue_Type<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:12:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l41" title="To body">To body</a></li></ul></span> <span class="keyword">is</span> <span class="keyword">limited</span> <span class="keyword">private</span>; </pre></li>
+<li id="l13"><pre> </pre></li>
+<li id="l14"><pre>   <span class="keyword">protected</span> <span class="keyword">type</span> <a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:14:19" title="defined at queues_pack_protected_generic.ads:14:19">Protected_Queue</a> <span class="keyword">is</span> </pre></li>
+<li id="l15"><pre> </pre></li>
+<li id="l16"><pre>      <span class="keyword">entry</span> <span class="droplink">Enqueue<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:16:13" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.adb.html#l9" title="To body">To body</a></li></ul></span>              (<a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:16:35" title="defined at queues_pack_protected_generic.ads:16:35">Item</a> :     <span class="droplink">Element<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:6:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l6" title="To spec">To spec</a></li></ul></span>); </pre></li>
+<li id="l17"><pre>      <span class="keyword">entry</span> <span class="droplink">Dequeue<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:17:13" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.adb.html#l16" title="To body">To body</a></li></ul></span> (<span class="droplink">Queue_Enum<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l7" title="To spec">To spec</a></li></ul></span>) (<a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:17:35" title="defined at queues_pack_protected_generic.ads:17:35">Item</a> : <span class="keyword">out</span> <span class="droplink">Element<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:6:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l6" title="To spec">To spec</a></li></ul></span>); </pre></li>
+<li id="l18"><pre> </pre></li>
+<li id="l19"><pre>      <span class="keyword">function</span> <span class="droplink">Is_Empty<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:19:16" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.adb.html#l25" title="To body">To body</a></li></ul></span> (<a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:19:26" title="defined at queues_pack_protected_generic.ads:19:26">Q</a> : <span class="droplink">Queue_Enum<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l7" title="To spec">To spec</a></li></ul></span>) <span class="keyword">return</span> Boolean; </pre></li>
+<li id="l20"><pre>      <span class="keyword">function</span> <span class="droplink">Is_Full<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:20:16" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.adb.html#l28" title="To body">To body</a></li></ul></span>                   <span class="keyword">return</span> Boolean; </pre></li>
+<li id="l21"><pre> </pre></li>
+<li id="l22"><pre>   <span class="keyword">private</span> </pre></li>
+<li id="l23"><pre>      <a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:23:7" title="defined at queues_pack_protected_generic.ads:23:7">Queue</a> : <span class="droplink">Queue_Type<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:12:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l12" title="To spec">To spec</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l41" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l24"><pre> </pre></li>
+<li id="l25"><pre>   <span class="keyword">end</span> <span class="droplink">Protected_Queue<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:14:19" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l14" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l26"><pre> </pre></li>
+<li id="l27"><pre><span class="keyword">private</span> </pre></li>
+<li id="l28"><pre>   <span class="keyword">subtype</span> <a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:28:12" title="defined at queues_pack_protected_generic.ads:28:12">Marker</a> <span class="keyword">is</span> Natural <span class="keyword">range</span> 0 .. <span class="droplink">Queue_Size<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:8:4" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l8" title="To spec">To spec</a></li></ul></span> - 1; </pre></li>
+<li id="l29"><pre>   <span class="keyword">type</span> <a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:29:9" title="defined at queues_pack_protected_generic.ads:29:9">Markers</a> <span class="keyword">is</span> <span class="keyword">array</span> (<span class="droplink">Queue_Enum<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l7" title="To spec">To spec</a></li></ul></span>) <span class="keyword">of</span> <span class="droplink">Marker<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:28:12" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l28" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l30"><pre> </pre></li>
+<li id="l31"><pre>   <span class="keyword">type</span> <a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:31:9" title="defined at queues_pack_protected_generic.ads:31:9">Readouts</a> <span class="keyword">is</span> <span class="keyword">array</span> (<span class="droplink">Queue_Enum<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l7" title="To spec">To spec</a></li></ul></span>) <span class="keyword">of</span> Boolean; </pre></li>
+<li id="l32"><pre>   <a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:32:4" title="defined at queues_pack_protected_generic.ads:32:4">All_Read</a>  : <span class="keyword">constant</span> <span class="droplink">Readouts<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:31:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l31" title="To spec">To spec</a></li></ul></span> := (<span class="keyword">others</span> =&gt; True); </pre></li>
+<li id="l33"><pre>   <a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:33:4" title="defined at queues_pack_protected_generic.ads:33:4">None_Read</a> : <span class="keyword">constant</span> <span class="droplink">Readouts<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:31:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l31" title="To spec">To spec</a></li></ul></span> := (<span class="keyword">others</span> =&gt; False); </pre></li>
+<li id="l34"><pre> </pre></li>
+<li id="l35"><pre>   <span class="keyword">type</span> <a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:35:9" title="defined at queues_pack_protected_generic.ads:35:9">Element_and_Readouts</a> <span class="keyword">is</span> <span class="keyword">record</span> </pre></li>
+<li id="l36"><pre>      Elem  : <span class="droplink">Element<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:6:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l6" title="To spec">To spec</a></li></ul></span>; <span class="comment">-- Initialized to invalids</span> </pre></li>
+<li id="l37"><pre>      Reads : <span class="droplink">Readouts<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:31:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l31" title="To spec">To spec</a></li></ul></span> := <span class="droplink">All_Read<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:32:4" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l32" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l38"><pre>   <span class="keyword">end</span> <span class="keyword">record</span>; </pre></li>
+<li id="l39"><pre>   <span class="keyword">type</span> <a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:39:9" title="defined at queues_pack_protected_generic.ads:39:9">List</a> <span class="keyword">is</span> <span class="keyword">array</span> (<span class="droplink">Marker<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:28:12" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l28" title="To spec">To spec</a></li></ul></span>&apos;Range) <span class="keyword">of</span> <span class="droplink">Element_and_Readouts<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:35:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l35" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l40"><pre> </pre></li>
+<li id="l41"><pre>   <span class="keyword">type</span> <span class="droplink">Queue_Type<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:12:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l12" title="To spec">To spec</a></li></ul></span> <span class="keyword">is</span> <span class="keyword">record</span> </pre></li>
+<li id="l42"><pre>      Free     : <span class="droplink">Marker<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:28:12" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l28" title="To spec">To spec</a></li></ul></span>  := <span class="droplink">Marker<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:28:12" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l28" title="To spec">To spec</a></li></ul></span>&apos;First; </pre></li>
+<li id="l43"><pre>      Readers  : <span class="droplink">Markers<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:29:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l29" title="To spec">To spec</a></li></ul></span> := (<span class="keyword">others</span> =&gt; <span class="droplink">Marker<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:28:12" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l28" title="To spec">To spec</a></li></ul></span>&apos;First); </pre></li>
+<li id="l44"><pre>      Elements : <span class="droplink">List<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:39:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l39" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l45"><pre>   <span class="keyword">end</span> <span class="keyword">record</span>; </pre></li>
+<li id="l46"><pre><span class="keyword">end</span> <span class="droplink">Queues_Pack_Protected_Generic<ul><li><a href="queues_pack_protected_generic.ads.html#queues_pack_protected_generic.ads:10:9" title="To API doc">To API doc</a></li><li><a href="src_queues_pack_protected_generic.ads.html#l10" title="To spec">To spec</a></li><li><a href="src_queues_pack_protected_generic.adb.html#l5" title="To body">To body</a></li></ul></span>; </pre></li>
+</ol></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,356 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>
+    Package: Queue_Pack_Protected
+  </title>
+  <link rel='stylesheet' href='support/docgen.css' type='text/css'/>
+  <link rel='stylesheet' href='support/tags.css' type='text/css'/>
+  <script src='support/docgen.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body onload="onloadDoc();">
+
+<div id='leftSide'>
+  <div id='leftSideInside'>
+  <div id='header'>
+    <h2 class="button">Documentation</h2>
+    <a href='toc.html'><div class="button2">Table of Contents</div></a>
+
+    <a href='tree.html'><div class="button2">Class Inheritance Tree</div></a>
+
+  </div>
+
+  <div id='navigation'>
+    <h2 class="button">Navigation</h2>
+    <a href='#Description'><div class="button2">Description</div></a>
+    <a href='#Tasks'><div class="button2">Tasks &amp; Protected</div></a>
+    <a href='#Types'><div class="button2">Types</div></a>
+    <a href='#Constants'><div class="button2">Constants &amp; Global variables</div></a>
+  </div><!-- navigation -->
+  </div>
+</div> <!-- leftSide -->
+
+<div class='default' id='rightSide'>
+ <div id='rightSideInside'>
+ <div id='Index'>
+  <h2>Index</h2>
+  <script type="text/javascript">
+    var names = new Array (
+new Array ('Protected_<wbr/>Queue', 'queue_pack_protected.ads:11:19', 'var-spec'),
+new Array ('Element', 'queue_pack_protected.ads:8:12', 'type-spec'),
+new Array ('Queue_<wbr/>Type', 'queue_pack_protected.ads:9:9', 'type-spec'),
+new Array ('Marker (private)', 'queue_pack_protected.ads:25:9', 'type-spec'),
+new Array ('List (private)', 'queue_pack_protected.ads:26:9', 'type-spec'),
+new Array ('Queue_<wbr/>Size', 'queue_pack_protected.ads:7:4', 'var-spec'),
+new Array ('Protected_<wbr/>Queue.<wbr/>Enqueue (abstract)', 'queue_pack_protected.ads:13:13', 'subp-spec'),
+new Array ('Protected_<wbr/>Queue.<wbr/>Dequeue (abstract)', 'queue_pack_protected.ads:14:13', 'subp-spec'),
+new Array ('Protected_<wbr/>Queue.<wbr/>Is_<wbr/>Empty', 'queue_pack_protected.ads:16:16', 'subp-spec'),
+new Array ('Protected_<wbr/>Queue.<wbr/>Is_<wbr/>Full', 'queue_pack_protected.ads:17:16', 'subp-spec'),
+new Array ('Protected_<wbr/>Queue.<wbr/>Queue (private)', 'queue_pack_protected.ads:20:7', 'subp-spec'),
+      new Array ('dummy', '', ''));
+    printIndexList (names);
+  </script>
+  <noscript>
+    <ul>
+      <li class='task-spec'><a href="#queue_pack_protected.ads:11:19">Protected_<wbr/>Queue</a></li>
+      <li class='type-spec'><a href="#queue_pack_protected.ads:8:12">Element</a></li>
+      <li class='type-spec'><a href="#queue_pack_protected.ads:9:9">Queue_<wbr/>Type</a></li>
+      <li class='type-spec'><a href="#queue_pack_protected.ads:25:9">Marker (private)</a></li>
+      <li class='type-spec'><a href="#queue_pack_protected.ads:26:9">List (private)</a></li>
+      <li class='var-spec'><a href="#queue_pack_protected.ads:7:4">Queue_<wbr/>Size</a></li>
+        <li class='subp-spec'><a href="#queue_pack_protected.ads:13:13">Enqueue (abstract)</a></li>
+        <li class='subp-spec'><a href="#queue_pack_protected.ads:14:13">Dequeue (abstract)</a></li>
+        <li class='subp-spec'><a href="#queue_pack_protected.ads:16:16">Is_<wbr/>Empty</a></li>
+        <li class='subp-spec'><a href="#queue_pack_protected.ads:17:16">Is_<wbr/>Full</a></li>
+        <li class='subp-spec'><a href="#queue_pack_protected.ads:20:7">Queue (private)</a></li>
+    </ul>
+  </noscript>
+ </div>
+ </div>
+</div>
+
+<div class='default' id='documentation'>
+  <div class='title'>
+    Package:
+<span class="droplink"><i>Queue_Pack_Protected</i><ul>
+  <li><a href="src_queue_pack_protected.ads.html">Goto spec source</a></li>
+  <li><a href="src_queue_pack_protected.adb.html">Goto body source</a></li>
+</ul></span>
+  </div>
+  <div class='subprograms'>
+    <h1><a name='Description' id='Description'></a>Description</h1>
+    <div class="class">
+    <div class='details'><pre><span class="keyword">package</span> <span class="name_emphasis">Queue_Pack_Protected</span> <span class="keyword">is</span></pre></div>
+    <div class='comment'>
+Uwe R. Zimmer, Australia, 2013
+
+</div>
+    </div>
+  </div>
+
+
+
+  <div class='subprograms'>
+    <h1><a name='Tasks' id='Tasks'></a>Tasks &amp; Protected</h1>
+    <div class="class">
+      <h3>
+        <a name='queue_pack_protected.ads:11:19' id='queue_pack_protected.ads:11:19'></a>
+<span class="droplink">Protected_Queue<ul>
+  <li><a href="src_queue_pack_protected.ads.html#l11">Goto spec in source</a></li>
+</ul></span>
+         (protected type)
+      </h3>
+      <div class="details"><b>Entries:</b><a href="queue_pack_protected.ads.html#queue_pack_protected.ads:13:13" title="Enqueue">Enqueue</a>, <a href="queue_pack_protected.ads.html#queue_pack_protected.ads:14:13" title="Dequeue">Dequeue</a>, <a href="queue_pack_protected.ads.html#queue_pack_protected.ads:16:16" title="Is_Empty">Is_Empty</a>, <a href="queue_pack_protected.ads.html#queue_pack_protected.ads:17:16" title="Is_Full">Is_Full</a>, <a href="queue_pack_protected.ads.html#queue_pack_protected.ads:20:7" title="Queue">Queue</a></div>
+      <div class='profile'>
+          <h4>References:</h4>
+          <div><i><a href="src_queue_pack_protected.ads.html#l11" title="queue_pack_protected.ads:11:19">queue_pack_protected.ads:11:19</a> (declaration)</i></div>
+          <div><i><a href="src_queue_pack_protected.adb.html#l7" title="queue_pack_protected.adb:7:19">queue_pack_protected.adb:7:19</a> (body)</i></div>
+          <div><i><a href="src_queue_pack_protected.adb.html#l31" title="queue_pack_protected.adb:31:8">queue_pack_protected.adb:31:8</a> (label)</i></div>
+          <div><i><a href="src_queue_pack_protected.ads.html#l22" title="queue_pack_protected.ads:22:8">queue_pack_protected.ads:22:8</a> (label)</i></div>
+          <div><i><a href="src_queue_test_protected.adb.html#l10" title="queue_test_protected.adb:10:12">queue_test_protected.adb:10:12</a> (reference)</i></div>
+      </div>
+      <div class='profile'>
+          <h4>Called by:</h4>
+          <div><i><a href="queue_test_protected.adb.html#queue_test_protected.adb:8:11" title="defined at queue_test_protected.adb:8:11">Queue_Test_Protected</a> defined at <a href="src_queue_test_protected.adb.html#l8" title="queue_test_protected.adb:8:11">queue_test_protected.adb:8:11</a></i></div>
+      </div>
+    </div>
+  </div>
+
+  <div class='subprograms'>
+    <h1><a name='Types' id='Types'></a>Types</h1>
+    <div class="class">
+      <h3>
+        <a name='queue_pack_protected.ads:8:12' id='queue_pack_protected.ads:8:12'></a>
+<span class="droplink">Element<ul>
+  <li><a href="src_queue_pack_protected.ads.html#l8">Goto declaration in source</a></li>
+</ul></span>
+      </h3>
+      <div class='details'><pre><span class="keyword">subtype</span> <span class="name_emphasis">Element</span> <span class="keyword">is</span> Character;</pre></div>
+      <div class='profile'>
+          <h4>References:</h4>
+          <div><i><a href="src_queue_pack_protected.ads.html#l8" title="queue_pack_protected.ads:8:12">queue_pack_protected.ads:8:12</a> (declaration)</i></div>
+          <div><i><a href="src_queue_pack_protected.adb.html#l9" title="queue_pack_protected.adb:9:29">queue_pack_protected.adb:9:29</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_protected.adb.html#l17" title="queue_pack_protected.adb:17:33">queue_pack_protected.adb:17:33</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_protected.ads.html#l13" title="queue_pack_protected.ads:13:33">queue_pack_protected.ads:13:33</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_protected.ads.html#l14" title="queue_pack_protected.ads:14:33">queue_pack_protected.ads:14:33</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_protected.ads.html#l26" title="queue_pack_protected.ads:26:35">queue_pack_protected.ads:26:35</a> (reference)</i></div>
+          <div><i><a href="src_queue_test_protected.adb.html#l27" title="queue_test_protected.adb:27:15">queue_test_protected.adb:27:15</a> (reference)</i></div>
+      </div>
+    </div>
+    <div class="class">
+      <h3>
+        <a name='queue_pack_protected.ads:9:9' id='queue_pack_protected.ads:9:9'></a>
+<span class="droplink">Queue_Type<ul>
+  <li><a href="src_queue_pack_protected.ads.html#l9">Goto declaration in source</a></li>
+  <li><a href="src_queue_pack_protected.ads.html#l27">Goto full declaration in source</a></li>
+</ul></span>
+      </h3>
+      <div class='details'><pre><span class="keyword">type</span> <span class="name_emphasis">Queue_Type</span> <span class="keyword">is</span> <span class="keyword">limited</span> <span class="keyword">private</span>;</pre></div>
+      <div class='profile'>
+          <h4>References:</h4>
+          <div><i><a href="src_queue_pack_protected.ads.html#l9" title="queue_pack_protected.ads:9:9">queue_pack_protected.ads:9:9</a> (declaration)</i></div>
+          <div><i><a href="src_queue_pack_protected.ads.html#l20" title="queue_pack_protected.ads:20:15">queue_pack_protected.ads:20:15</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_protected.ads.html#l27" title="queue_pack_protected.ads:27:9">queue_pack_protected.ads:27:9</a> (full declaration)</i></div>
+      </div>
+    </div>
+    <div class="class">
+      <h3>
+        <a name='queue_pack_protected.ads:25:9' id='queue_pack_protected.ads:25:9'></a>
+<span class="droplink">Marker (private)<ul>
+  <li><a href="src_queue_pack_protected.ads.html#l25">Goto declaration in source</a></li>
+</ul></span>
+      </h3>
+      <div class='details'><pre><span class="keyword">type</span> <span class="name_emphasis">Marker</span> <span class="keyword">is</span> <span class="keyword">mod</span> <a href="queue_pack_protected.ads.html#queue_pack_protected.ads:7:4" title="defined at queue_pack_protected.ads:7:4">Queue_Size</a>;</pre></div>
+      <div class='profile'>
+          <h4>References:</h4>
+          <div><i><a href="src_queue_pack_protected.ads.html#l25" title="queue_pack_protected.ads:25:9">queue_pack_protected.ads:25:9</a> (declaration)</i></div>
+          <div><i><a href="src_queue_pack_protected.ads.html#l26" title="queue_pack_protected.ads:26:24">queue_pack_protected.ads:26:24</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_protected.ads.html#l28" title="queue_pack_protected.ads:28:19">queue_pack_protected.ads:28:19</a> (reference)</i></div>
+          <div><i><a href="src_queue_pack_protected.ads.html#l28" title="queue_pack_protected.ads:28:30">queue_pack_protected.ads:28:30</a> (reference)</i></div>
+      </div>
+    </div>
+    <div class="class">
+      <h3>
+        <a name='queue_pack_protected.ads:26:9' id='queue_pack_protected.ads:26:9'></a>
+<span class="droplink">List (private)<ul>
+  <li><a href="src_queue_pack_protected.ads.html#l26">Goto declaration in source</a></li>
+</ul></span>
+      </h3>
+      <div class='details'><pre><span class="keyword">type</span> <span class="name_emphasis">List</span> <span class="keyword">is</span> <span class="keyword">array</span> (<a href="queue_pack_protected.ads.html#queue_pack_protected.ads:25:9" title="defined at queue_pack_protected.ads:25:9">Marker</a>) <span class="keyword">of</span> <a href="queue_pack_protected.ads.html#queue_pack_protected.ads:8:12" title="defined at queue_pack_protected.ads:8:12">Element</a>;</pre></div>
+      <div class='profile'>
+          <h4>References:</h4>
+          <div><i><a href="src_queue_pack_protected.ads.html#l26" title="queue_pack_protected.ads:26:9">queue_pack_protected.ads:26:9</a> (declaration)</i></div>
+          <div><i><a href="src_queue_pack_protected.ads.html#l30" title="queue_pack_protected.ads:30:19">queue_pack_protected.ads:30:19</a> (reference)</i></div>
+      </div>
+    </div>
+  </div>
+
+  <div class='subprograms'>
+    <h1><a name='Constants' id='Constants'></a>Constants &amp; Global variables</h1>
+    <div class="class">
+      <h3><a name='queue_pack_protected.ads:7:4' id='queue_pack_protected.ads:7:4'></a>
+<span class="droplink">Queue_Size<ul>
+  <li><a href="src_queue_pack_protected.ads.html#l7">Goto declaration in source</a></li>
+</ul></span>
+        <span class="type">(Positive)</span>
+      </h3>
+      <div class='details'><pre><span class="name_emphasis">Queue_Size</span> : <span class="keyword">constant</span> Positive := 10;</pre></div>
+      <div class='profile'>
+        <h4>References:</h4>
+          <div><i><a href="src_queue_pack_protected.ads.html#l7" title="queue_pack_protected.ads:7:4">queue_pack_protected.ads:7:4</a> (declaration)</i></div>
+          <div><i><a href="src_queue_pack_protected.ads.html#l25" title="queue_pack_protected.ads:25:23">queue_pack_protected.ads:25:23</a> (reference)</i></div>
+      </div>
+    </div>
+  </div>
+
+    <div class='subprograms'>
+      <h1><a name='Methods' id='Methods'></a>Subprograms &amp; Entries</h1>
+        <div class='class'>
+          <div>
+            <h3>
+              <a name='queue_pack_protected.ads:13:13' id='queue_pack_protected.ads:13:13'></a>
+              <span class="type"><a href="#queue_pack_protected.ads:11:19">Protected_Queue</a></span>.
+<span class="droplink">Enqueue (abstract)<ul>
+  <li><a href="src_queue_pack_protected.ads.html#l13">Goto spec in source</a></li>
+  <li><a href="src_queue_pack_protected.adb.html#l9">Goto body in source</a></li>
+</ul></span>
+            </h3>
+            <div class='details'><pre><span class="keyword">entry</span> <span class="name_emphasis">Enqueue</span> <table><tr><td>(</td><td><span class="name"><a name="queue_pack_protected.ads:13:22"></a>Item</span></td><td>:     <a href="queue_pack_protected.ads.html#queue_pack_protected.ads:8:12" title="defined at queue_pack_protected.ads:8:12">Element</a>);</td></tr></table></pre></div>
+            <div class='profile'>
+              <h4>References:</h4>
+                <div><i><a href="src_queue_pack_protected.ads.html#l13" title="queue_pack_protected.ads:13:13">queue_pack_protected.ads:13:13</a> (declaration)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l9" title="queue_pack_protected.adb:9:13">queue_pack_protected.adb:9:13</a> (body)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l15" title="queue_pack_protected.adb:15:11">queue_pack_protected.adb:15:11</a> (label)</i></div>
+                <div><i><a href="src_queue_test_protected.adb.html#l21" title="queue_test_protected.adb:21:16">queue_test_protected.adb:21:16</a> (call)</i></div>
+            </div>
+            <div class='profile'>
+              <h4>Called by:</h4>
+                <div><i><a href="queue_test_protected.adb.html#queue_test_protected.adb:12:9" title="defined at queue_test_protected.adb:12:9">Queue_Test_Protected.Producer</a> defined at <a href="src_queue_test_protected.adb.html#l12" title="queue_test_protected.adb:12:9">queue_test_protected.adb:12:9</a></i></div>
+            </div>
+          </div>
+        </div>
+        <div class='class'>
+          <div>
+            <h3>
+              <a name='queue_pack_protected.ads:14:13' id='queue_pack_protected.ads:14:13'></a>
+              <span class="type"><a href="#queue_pack_protected.ads:11:19">Protected_Queue</a></span>.
+<span class="droplink">Dequeue (abstract)<ul>
+  <li><a href="src_queue_pack_protected.ads.html#l14">Goto spec in source</a></li>
+  <li><a href="src_queue_pack_protected.adb.html#l17">Goto body in source</a></li>
+</ul></span>
+            </h3>
+            <div class='details'><pre><span class="keyword">entry</span> <span class="name_emphasis">Dequeue</span> <table><tr><td>(</td><td><span class="name"><a name="queue_pack_protected.ads:14:22"></a>Item</span></td><td>: <span class="keyword">out</span> <a href="queue_pack_protected.ads.html#queue_pack_protected.ads:8:12" title="defined at queue_pack_protected.ads:8:12">Element</a>);</td></tr></table></pre></div>
+            <div class='profile'>
+              <h4>References:</h4>
+                <div><i><a href="src_queue_pack_protected.ads.html#l14" title="queue_pack_protected.ads:14:13">queue_pack_protected.ads:14:13</a> (declaration)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l17" title="queue_pack_protected.adb:17:13">queue_pack_protected.adb:17:13</a> (body)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l23" title="queue_pack_protected.adb:23:11">queue_pack_protected.adb:23:11</a> (label)</i></div>
+                <div><i><a href="src_queue_test_protected.adb.html#l32" title="queue_test_protected.adb:32:19">queue_test_protected.adb:32:19</a> (call)</i></div>
+            </div>
+            <div class='profile'>
+              <h4>Called by:</h4>
+                <div><i><a href="queue_test_protected.adb.html#queue_test_protected.adb:13:9" title="defined at queue_test_protected.adb:13:9">Queue_Test_Protected.Consumer</a> defined at <a href="src_queue_test_protected.adb.html#l13" title="queue_test_protected.adb:13:9">queue_test_protected.adb:13:9</a></i></div>
+            </div>
+          </div>
+        </div>
+        <div class='class'>
+          <div>
+            <h3>
+              <a name='queue_pack_protected.ads:16:16' id='queue_pack_protected.ads:16:16'></a>
+              <span class="type"><a href="#queue_pack_protected.ads:11:19">Protected_Queue</a></span>.
+<span class="droplink">Is_Empty<ul>
+  <li><a href="src_queue_pack_protected.ads.html#l16">Goto spec in source</a></li>
+  <li><a href="src_queue_pack_protected.adb.html#l25">Goto body in source</a></li>
+</ul></span>
+            </h3>
+            <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Is_Empty</span> <span class="keyword">return</span> Boolean;</pre></div>
+            <div class='profile'>
+              <h4>References:</h4>
+                <div><i><a href="src_queue_pack_protected.ads.html#l16" title="queue_pack_protected.ads:16:16">queue_pack_protected.ads:16:16</a> (declaration)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l17" title="queue_pack_protected.adb:17:51">queue_pack_protected.adb:17:51</a> (call)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l25" title="queue_pack_protected.adb:25:16">queue_pack_protected.adb:25:16</a> (body)</i></div>
+            </div>
+            <div class='profile'>
+              <h4>Called by:</h4>
+                <div><i><a href="queue_pack_protected.ads.html#queue_pack_protected.ads:14:13" title="defined at queue_pack_protected.ads:14:13">Dequeue</a> defined at <a href="src_queue_pack_protected.ads.html#l14" title="queue_pack_protected.ads:14:13">queue_pack_protected.ads:14:13</a></i></div>
+            </div>
+          </div>
+        </div>
+        <div class='class'>
+          <div>
+            <h3>
+              <a name='queue_pack_protected.ads:17:16' id='queue_pack_protected.ads:17:16'></a>
+              <span class="type"><a href="#queue_pack_protected.ads:11:19">Protected_Queue</a></span>.
+<span class="droplink">Is_Full<ul>
+  <li><a href="src_queue_pack_protected.ads.html#l17">Goto spec in source</a></li>
+  <li><a href="src_queue_pack_protected.adb.html#l28">Goto body in source</a></li>
+</ul></span>
+            </h3>
+            <div class='details'><pre><span class="keyword">function</span> <span class="name_emphasis">Is_Full</span>  <span class="keyword">return</span> Boolean;</pre></div>
+            <div class='profile'>
+              <h4>References:</h4>
+                <div><i><a href="src_queue_pack_protected.ads.html#l17" title="queue_pack_protected.ads:17:16">queue_pack_protected.ads:17:16</a> (declaration)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l9" title="queue_pack_protected.adb:9:47">queue_pack_protected.adb:9:47</a> (call)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l28" title="queue_pack_protected.adb:28:16">queue_pack_protected.adb:28:16</a> (body)</i></div>
+            </div>
+            <div class='profile'>
+              <h4>Called by:</h4>
+                <div><i><a href="queue_pack_protected.ads.html#queue_pack_protected.ads:13:13" title="defined at queue_pack_protected.ads:13:13">Enqueue</a> defined at <a href="src_queue_pack_protected.ads.html#l13" title="queue_pack_protected.ads:13:13">queue_pack_protected.ads:13:13</a></i></div>
+            </div>
+          </div>
+        </div>
+        <div class='class'>
+          <div>
+            <h3>
+              <a name='queue_pack_protected.ads:20:7' id='queue_pack_protected.ads:20:7'></a>
+              <span class="type"><a href="#queue_pack_protected.ads:11:19">Protected_Queue</a></span>.
+<span class="droplink">Queue (private)<ul>
+  <li><a href="src_queue_pack_protected.ads.html#l20">Goto spec in source</a></li>
+</ul></span>
+            </h3>
+            <div class='details'><pre><span class="name_emphasis">Queue</span></td><td>: <a href="queue_pack_protected.ads.html#queue_pack_protected.ads:9:9" title="defined at queue_pack_protected.ads:9:9">Queue_Type</a>;</pre></div>
+            <div class='profile'>
+              <h4>References:</h4>
+                <div><i><a href="src_queue_pack_protected.ads.html#l20" title="queue_pack_protected.ads:20:7">queue_pack_protected.ads:20:7</a> (declaration)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l12" title="queue_pack_protected.adb:12:10">queue_pack_protected.adb:12:10</a> (reference)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l12" title="queue_pack_protected.adb:12:26">queue_pack_protected.adb:12:26</a> (reference)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l13" title="queue_pack_protected.adb:13:10">queue_pack_protected.adb:13:10</a> (reference)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l13" title="queue_pack_protected.adb:13:28">queue_pack_protected.adb:13:28</a> (reference)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l14" title="queue_pack_protected.adb:14:10">queue_pack_protected.adb:14:10</a> (reference)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l20" title="queue_pack_protected.adb:20:23">queue_pack_protected.adb:20:23</a> (reference)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l20" title="queue_pack_protected.adb:20:39">queue_pack_protected.adb:20:39</a> (reference)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l21" title="queue_pack_protected.adb:21:10">queue_pack_protected.adb:21:10</a> (reference)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l21" title="queue_pack_protected.adb:21:23">queue_pack_protected.adb:21:23</a> (reference)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l22" title="queue_pack_protected.adb:22:10">queue_pack_protected.adb:22:10</a> (reference)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l22" title="queue_pack_protected.adb:22:28">queue_pack_protected.adb:22:28</a> (reference)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l22" title="queue_pack_protected.adb:22:40">queue_pack_protected.adb:22:40</a> (reference)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l26" title="queue_pack_protected.adb:26:10">queue_pack_protected.adb:26:10</a> (reference)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l29" title="queue_pack_protected.adb:29:14">queue_pack_protected.adb:29:14</a> (reference)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l29" title="queue_pack_protected.adb:29:38">queue_pack_protected.adb:29:38</a> (reference)</i></div>
+                <div><i><a href="src_queue_pack_protected.adb.html#l29" title="queue_pack_protected.adb:29:50">queue_pack_protected.adb:29:50</a> (reference)</i></div>
+            </div>
+            <div class='profile'>
+              <h4>Called by:</h4>
+                <div><i><a href="queue_pack_protected.ads.html#queue_pack_protected.ads:14:13" title="defined at queue_pack_protected.ads:14:13">Dequeue</a> defined at <a href="src_queue_pack_protected.ads.html#l14" title="queue_pack_protected.ads:14:13">queue_pack_protected.ads:14:13</a></i></div>
+                <div><i><a href="queue_pack_protected.ads.html#queue_pack_protected.ads:14:13" title="defined at queue_pack_protected.ads:14:13">Dequeue</a> defined at <a href="src_queue_pack_protected.ads.html#l14" title="queue_pack_protected.ads:14:13">queue_pack_protected.ads:14:13</a></i></div>
+                <div><i><a href="queue_pack_protected.ads.html#queue_pack_protected.ads:14:13" title="defined at queue_pack_protected.ads:14:13">Dequeue</a> defined at <a href="src_queue_pack_protected.ads.html#l14" title="queue_pack_protected.ads:14:13">queue_pack_protected.ads:14:13</a></i></div>
+                <div><i><a href="queue_pack_protected.ads.html#queue_pack_protected.ads:14:13" title="defined at queue_pack_protected.ads:14:13">Dequeue</a> defined at <a href="src_queue_pack_protected.ads.html#l14" title="queue_pack_protected.ads:14:13">queue_pack_protected.ads:14:13</a></i></div>
+                <div><i><a href="queue_pack_protected.ads.html#queue_pack_protected.ads:14:13" title="defined at queue_pack_protected.ads:14:13">Dequeue</a> defined at <a href="src_queue_pack_protected.ads.html#l14" title="queue_pack_protected.ads:14:13">queue_pack_protected.ads:14:13</a></i></div>
+                <div><i><a href="queue_pack_protected.ads.html#queue_pack_protected.ads:14:13" title="defined at queue_pack_protected.ads:14:13">Dequeue</a> defined at <a href="src_queue_pack_protected.ads.html#l14" title="queue_pack_protected.ads:14:13">queue_pack_protected.ads:14:13</a></i></div>
+                <div><i><a href="queue_pack_protected.ads.html#queue_pack_protected.ads:14:13" title="defined at queue_pack_protected.ads:14:13">Dequeue</a> defined at <a href="src_queue_pack_protected.ads.html#l14" title="queue_pack_protected.ads:14:13">queue_pack_protected.ads:14:13</a></i></div>
+                <div><i><a href="queue_pack_protected.ads.html#queue_pack_protected.ads:13:13" title="defined at queue_pack_protected.ads:13:13">Enqueue</a> defined at <a href="src_queue_pack_protected.ads.html#l13" title="queue_pack_protected.ads:13:13">queue_pack_protected.ads:13:13</a></i></div>
+                <div><i><a href="queue_pack_protected.ads.html#queue_pack_protected.ads:13:13" title="defined at queue_pack_protected.ads:13:13">Enqueue</a> defined at <a href="src_queue_pack_protected.ads.html#l13" title="queue_pack_protected.ads:13:13">queue_pack_protected.ads:13:13</a></i></div>
+                <div><i><a href="queue_pack_protected.ads.html#queue_pack_protected.ads:13:13" title="defined at queue_pack_protected.ads:13:13">Enqueue</a> defined at <a href="src_queue_pack_protected.ads.html#l13" title="queue_pack_protected.ads:13:13">queue_pack_protected.ads:13:13</a></i></div>
+                <div><i><a href="queue_pack_protected.ads.html#queue_pack_protected.ads:13:13" title="defined at queue_pack_protected.ads:13:13">Enqueue</a> defined at <a href="src_queue_pack_protected.ads.html#l13" title="queue_pack_protected.ads:13:13">queue_pack_protected.ads:13:13</a></i></div>
+                <div><i><a href="queue_pack_protected.ads.html#queue_pack_protected.ads:13:13" title="defined at queue_pack_protected.ads:13:13">Enqueue</a> defined at <a href="src_queue_pack_protected.ads.html#l13" title="queue_pack_protected.ads:13:13">queue_pack_protected.ads:13:13</a></i></div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div> <!-- documentation -->
+
+</body>
+</html>

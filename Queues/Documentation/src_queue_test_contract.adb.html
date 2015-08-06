@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>
+    File: queue_test_contract.adb
+  </title>
+  <link rel='stylesheet' href='support/docgen.css' type='text/css'/>
+  <link rel='stylesheet' href='support/tags.css' type='text/css'/>
+  <script src='support/docgen.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body onload="onloadDoc();">
+
+<div id='leftSide'>
+  <div id='leftSideInside'>
+  <div id='header'>
+    <h2 class="button">Documentation</h2>
+    <a href='toc.html'><div class="button2">Table of Contents</div></a>
+
+    <a href='tree.html'><div class="button2">Class Inheritance Tree</div></a>
+
+  </div>
+  </div>
+</div> <!-- leftSide -->
+
+<div class='subprograms'>
+  <div class='details'><ol><li id="l1"><pre><span class="comment">--</span> </pre></li>
+<li id="l2"><pre><span class="comment">-- Uwe R. Zimmer, Australia, 2013</span> </pre></li>
+<li id="l3"><pre><span class="comment">--</span> </pre></li>
+<li id="l4"><pre> </pre></li>
+<li id="l5"><pre><span class="keyword">with</span> Ada.Text_IO;         <span class="keyword">use</span> Ada.Text_IO; </pre></li>
+<li id="l6"><pre><span class="keyword">with</span> <span class="droplink">Exceptions<ul><li><a href="exceptions.ads.html#exceptions.ads:17:9" title="To API doc">To API doc</a></li><li><a href="src_exceptions.ads.html#l17" title="To spec">To spec</a></li><li><a href="src_exceptions.adb.html#l8" title="To body">To body</a></li></ul></span>;          <span class="keyword">use</span> <span class="droplink">Exceptions<ul><li><a href="exceptions.ads.html#exceptions.ads:17:9" title="To API doc">To API doc</a></li><li><a href="src_exceptions.ads.html#l17" title="To spec">To spec</a></li><li><a href="src_exceptions.adb.html#l8" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l7"><pre><span class="keyword">with</span> <span class="droplink">Queue_Pack_Contract<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l7" title="To spec">To spec</a></li><li><a href="src_queue_pack_contract.adb.html#l5" title="To body">To body</a></li></ul></span>; <span class="keyword">use</span> <span class="droplink">Queue_Pack_Contract<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:7:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l7" title="To spec">To spec</a></li><li><a href="src_queue_pack_contract.adb.html#l5" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l8"><pre><span class="keyword">with</span> System.Assertions;   <span class="keyword">use</span> System.Assertions; </pre></li>
+<li id="l9"><pre> </pre></li>
+<li id="l10"><pre><span class="keyword">procedure</span> Queue_Test_Contract <span class="keyword">is</span> </pre></li>
+<li id="l11"><pre> </pre></li>
+<li id="l12"><pre>   Queue : <span class="droplink">Queue_Type<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:12:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l12" title="To spec">To spec</a></li><li><a href="src_queue_pack_contract.ads.html#l33" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l13"><pre>   Item  : <span class="droplink">Element<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:10:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l10" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l14"><pre> </pre></li>
+<li id="l15"><pre><span class="keyword">begin</span> </pre></li>
+<li id="l16"><pre>   <span class="droplink">Enqueue<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l14" title="To spec">To spec</a></li><li><a href="src_queue_pack_contract.adb.html#l7" title="To body">To body</a></li></ul></span> (<span class="droplink">Item<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:23" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l14" title="To spec">To spec</a></li></ul></span> =&gt; 1, <span class="droplink">Q<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:43" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l14" title="To spec">To spec</a></li><li><a href="src_queue_pack_contract.adb.html#l7" title="To body">To body</a></li></ul></span> =&gt; <a href="src_queue_test_contract.adb.html#l12" title="defined at queue_test_contract.adb:12:4">Queue</a>); </pre></li>
+<li id="l17"><pre>   <span class="droplink">Enqueue<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l14" title="To spec">To spec</a></li><li><a href="src_queue_pack_contract.adb.html#l7" title="To body">To body</a></li></ul></span> (<span class="droplink">Item<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:23" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l14" title="To spec">To spec</a></li></ul></span> =&gt; 2, <span class="droplink">Q<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:43" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l14" title="To spec">To spec</a></li><li><a href="src_queue_pack_contract.adb.html#l7" title="To body">To body</a></li></ul></span> =&gt; <a href="src_queue_test_contract.adb.html#l12" title="defined at queue_test_contract.adb:12:4">Queue</a>); </pre></li>
+<li id="l18"><pre>   <span class="droplink">Enqueue<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l14" title="To spec">To spec</a></li><li><a href="src_queue_pack_contract.adb.html#l7" title="To body">To body</a></li></ul></span> (<span class="droplink">Item<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:23" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l14" title="To spec">To spec</a></li></ul></span> =&gt; 3, <span class="droplink">Q<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:14:43" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l14" title="To spec">To spec</a></li><li><a href="src_queue_pack_contract.adb.html#l7" title="To body">To body</a></li></ul></span> =&gt; <a href="src_queue_test_contract.adb.html#l12" title="defined at queue_test_contract.adb:12:4">Queue</a>); </pre></li>
+<li id="l19"><pre> </pre></li>
+<li id="l20"><pre>   <span class="droplink">Dequeue<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:20:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l20" title="To spec">To spec</a></li><li><a href="src_queue_pack_contract.adb.html#l15" title="To body">To body</a></li></ul></span> (<a href="src_queue_test_contract.adb.html#l13" title="defined at queue_test_contract.adb:13:4">Item</a>, <a href="src_queue_test_contract.adb.html#l12" title="defined at queue_test_contract.adb:12:4">Queue</a>); Put (<span class="droplink">Element<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:10:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l10" title="To spec">To spec</a></li></ul></span>&apos;Image (<a href="src_queue_test_contract.adb.html#l13" title="defined at queue_test_contract.adb:13:4">Item</a>)); </pre></li>
+<li id="l21"><pre>   <span class="droplink">Dequeue<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:20:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l20" title="To spec">To spec</a></li><li><a href="src_queue_pack_contract.adb.html#l15" title="To body">To body</a></li></ul></span> (<a href="src_queue_test_contract.adb.html#l13" title="defined at queue_test_contract.adb:13:4">Item</a>, <a href="src_queue_test_contract.adb.html#l12" title="defined at queue_test_contract.adb:12:4">Queue</a>); Put (<span class="droplink">Element<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:10:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l10" title="To spec">To spec</a></li></ul></span>&apos;Image (<a href="src_queue_test_contract.adb.html#l13" title="defined at queue_test_contract.adb:13:4">Item</a>)); </pre></li>
+<li id="l22"><pre>   <span class="droplink">Dequeue<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:20:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l20" title="To spec">To spec</a></li><li><a href="src_queue_pack_contract.adb.html#l15" title="To body">To body</a></li></ul></span> (<a href="src_queue_test_contract.adb.html#l13" title="defined at queue_test_contract.adb:13:4">Item</a>, <a href="src_queue_test_contract.adb.html#l12" title="defined at queue_test_contract.adb:12:4">Queue</a>); Put (<span class="droplink">Element<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:10:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l10" title="To spec">To spec</a></li></ul></span>&apos;Image (<a href="src_queue_test_contract.adb.html#l13" title="defined at queue_test_contract.adb:13:4">Item</a>)); </pre></li>
+<li id="l23"><pre> </pre></li>
+<li id="l24"><pre>   <span class="droplink">Dequeue<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:20:14" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l20" title="To spec">To spec</a></li><li><a href="src_queue_pack_contract.adb.html#l15" title="To body">To body</a></li></ul></span> (<a href="src_queue_test_contract.adb.html#l13" title="defined at queue_test_contract.adb:13:4">Item</a>, <a href="src_queue_test_contract.adb.html#l12" title="defined at queue_test_contract.adb:12:4">Queue</a>); <span class="comment">-- will produce an Assert_Failure</span> </pre></li>
+<li id="l25"><pre>   Put (<span class="droplink">Element<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:10:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l10" title="To spec">To spec</a></li></ul></span>&apos;Image (<a href="src_queue_test_contract.adb.html#l13" title="defined at queue_test_contract.adb:13:4">Item</a>)); </pre></li>
+<li id="l26"><pre> </pre></li>
+<li id="l27"><pre>   Put (<span class="string">&quot;Queue is empty on exit: &quot;</span>); Put (Boolean&apos;Image (<span class="droplink">Is_Empty<ul><li><a href="queue_pack_contract.ads.html#queue_pack_contract.ads:25:13" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_contract.ads.html#l25" title="To spec">To spec</a></li><li><a href="src_queue_pack_contract.ads.html#l40" title="To body">To body</a></li></ul></span> (<a href="src_queue_test_contract.adb.html#l12" title="defined at queue_test_contract.adb:12:4">Queue</a>))); </pre></li>
+<li id="l28"><pre> </pre></li>
+<li id="l29"><pre><span class="keyword">exception</span> </pre></li>
+<li id="l30"><pre>   <span class="keyword">when</span> Exception_Id : Assert_Failure =&gt; <span class="droplink">Show_Exception<ul><li><a href="exceptions.ads.html#exceptions.ads:19:14" title="To API doc">To API doc</a></li><li><a href="src_exceptions.ads.html#l19" title="To spec">To spec</a></li><li><a href="src_exceptions.adb.html#l10" title="To body">To body</a></li></ul></span> (Exception_Id); </pre></li>
+<li id="l31"><pre><span class="keyword">end</span> <span class="droplink">Queue_Test_Contract<ul><li><a href="src_queue_test_contract.adb.html#l10" title="To spec">To spec</a></li><li><a href="src_queue_test_contract.adb.html#l10" title="To body">To body</a></li></ul></span>; </pre></li>
+</ol></div>
+</div>
+
+</body>
+</html>
