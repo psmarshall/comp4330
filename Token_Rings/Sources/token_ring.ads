@@ -15,6 +15,4 @@ package Token_Ring is
 private
    Local_Data_Token : Token_Type;
    Local_Status_Token : Token_Type;
-   Have_Data_Token : Boolean := False;
-   Have_Status_Token : Boolean := False;
 end Token_Ring;
