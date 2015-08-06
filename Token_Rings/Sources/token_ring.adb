@@ -10,13 +10,13 @@ package body Token_Ring is
    begin
       -- In a token ring, we need to know who our neighbour in the ring is.
       -- Accept a pointer to the next task and store it. Note that this must be
-      -- called before any data can be received.
+      -- called before any tokens can be received.
       accept Set_Next_Node (Node : in Token_Task_Access) do
          Next := Node;
       end Set_Next_Node;
       loop
          select
-            accept ReceiveStatus (Token : in Token_Type) do
+            accept ReceiveStatus (Token : in Status_Token_Type) do
                Local_Status_Token := Token;
                Put_Line ("Task" & Image (Current_Task) &
                          " received status token");
@@ -27,7 +27,7 @@ package body Token_Ring is
             Next.all.ReceiveStatus (Local_Status_Token);
             Put_Line ("Task" & Image (Current_Task) & " passed status token");
          or
-            accept ReceiveData (Token : in Token_Type) do
+            accept ReceiveData (Token : in Data_Token_Type) do
                Local_Data_Token := Token;
                Put_Line ("Task" & Image (Current_Task) &
                          " received data token");
@@ -40,7 +40,7 @@ package body Token_Ring is
             -- otherwise it will stay stuck behind the data token at the next
             -- node, and so on.
             if ReceiveStatus'Count > 0 then
-               accept ReceiveStatus (Token : in Token_Type) do
+               accept ReceiveStatus (Token : in Status_Token_Type) do
                   Local_Status_Token := Token;
                   Put_Line ("Task" & Image (Current_Task) &
                             " received status token AFTER processing data");
