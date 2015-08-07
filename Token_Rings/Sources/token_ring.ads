@@ -13,7 +13,14 @@ package Token_Ring is
    -- back to the first (circular linked-list).
    task type Token_Task is
       entry ReceiveData   (Token : in Data_Token_Type);
+      entry Send_Data     (Token : in Data_Token_Type);
       entry ReceiveStatus (Token : in Status_Token_Type);
-      entry Set_Next_Node (Node  : in Token_Task_Access);
+      entry Set_Next_Node (This, Node : in Token_Task_Access);
    end Token_Task;
+
+   task type Data_Processing_Task is
+      entry Process_Data   (Token : in Data_Token_Type);
+      entry Set_Token_Task (Node  : in Token_Task_Access);
+   end Data_Processing_Task;
+
 end Token_Ring;
