@@ -6,7 +6,7 @@ generic
    type Status_Token_Type is private;
 package Token_Ring is
    type Token_Task; --forward declare task type
-   type Token_Task_Access is access Token_Task; -- pointer to task
+   type Token_Task_Access is access all Token_Task; -- pointer to task
 
    -- Finish declaring task type.
    -- Each task has a pointer to the next task, with the final task pointing

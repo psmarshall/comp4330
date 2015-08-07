@@ -13,16 +13,11 @@ procedure Token_Ring_Test is
    use Token_Ring_Character;
 
    type Node_Index is mod 8;
-   Nodes : array (Node_Index) of Token_Task_Access;
-
+   Nodes : array (Node_Index) of aliased Token_Task;
 begin
-   -- Initialise each Node
-   for ix in Node_Index loop
-     Nodes(ix) := new Token_Task;
-   end loop;
    -- Set up our ring, using modulo type to handle the edge case
    for ix in Node_Index loop
-     Nodes(ix).Set_Next_Node (Nodes(Node_Index'Succ (ix)));
+     Nodes(ix).Set_Next_Node (Nodes(Node_Index'Succ (ix))'Access);
    end loop;
    -- Insert the tokens into our network
    Nodes(0).ReceiveStatus ('s');
