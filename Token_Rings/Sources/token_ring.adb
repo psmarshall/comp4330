@@ -3,6 +3,8 @@
 --
 with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Task_Identification; use Ada.Task_Identification;
+with Ada.Real_Time; use Ada.Real_Time;
+with Ada.Calendar.Formatting;
 
 package body Token_Ring is
    task body Token_Task is
@@ -12,6 +14,7 @@ package body Token_Ring is
       Local_Status_Token : Status_Token_Type;
 
       Local_Data_Task : Data_Processing_Task;
+      Start, Finish : Time;
    begin
       -- In a token ring, we need to know who our neighbour in the ring is.
       -- Accept a pointer to the next task and store it. Note that this must be
@@ -29,7 +32,10 @@ package body Token_Ring is
                          " received status token");
             end ReceiveStatus;
             -- Delay here to simulate doing something with the status token
-            delay 0.01;
+            Start := Clock;
+            delay 0.1;
+            Finish := Clock;
+            Put_Line ("Task" & Image (Current_Task) & " took " & Duration'Image (To_Duration (Finish - Start)));
             -- Pass on the status token to the next node
             Next.all.ReceiveStatus (Local_Status_Token);
             Put_Line ("Task" & Image (Current_Task) & " passed status token");
@@ -77,7 +83,7 @@ package body Token_Ring is
          -- Delay here to simulate doing something with the data.
          -- This would normally change the Local_Data_Token, for example,
          -- to stick some data in it for another node.
-         delay 0.1;
+         delay 1.0;
 
          My_Token_Task.all.Send_Data (Local_Data_Token);
       end loop;
