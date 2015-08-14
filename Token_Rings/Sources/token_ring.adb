@@ -13,6 +13,7 @@ package body Token_Ring is
       Local_Status_Token : Status_Token_Type;
 
       Local_Data_Task : Data_Processing_Task;
+      Local_Burger_Task : Burger_Flipping_Task;
       Start, Finish : Time;
    begin
       -- In a token ring, we need to know who our neighbour in the ring is.
@@ -21,18 +22,24 @@ package body Token_Ring is
       accept Set_Next_Node (This, Node : in Token_Task_Access) do
          Next := Node;
          Local_Data_Task.Set_Token_Task (This);
+         Local_Burger_Task.Flip_Burgers; -- We are hungry
       end Set_Next_Node;
 
       loop
          select
             accept ReceiveStatus (Token : in Status_Token_Type) do
+               Start := Clock;
                Local_Status_Token := Token;
                Put_Line ("Task" & Image (Current_Task) &
                          " received status token");
             end ReceiveStatus;
             -- Delay here to simulate doing something with the status token
-            Start := Clock;
             delay 0.1;
+            for ix in 1..150_000_000 loop
+               null;
+            end loop;
+
+
             Finish := Clock;
             Put_Line ("Task" & Image (Current_Task) & " took " & Duration'Image (To_Duration (Finish - Start)));
             -- Pass on the status token to the next node
@@ -65,6 +72,8 @@ package body Token_Ring is
    task body Data_Processing_Task is
       Local_Data_Token : Data_Token_Type;
       My_Token_Task : Token_Task_Access;
+      type Number_Range is new Natural range 0..100_000_000;
+      Magic_Number : Number_Range := 0;
    begin
       -- We need a pointer back to the task that handles the network entries,
       -- so accept and set it here.
@@ -82,10 +91,32 @@ package body Token_Ring is
          -- Delay here to simulate doing something with the data.
          -- This would normally change the Local_Data_Token, for example,
          -- to stick some data in it for another node.
-         delay 1.0;
+         --for ix in 1..100_000_000 loop
+         --   Magic_Number := Magic_Number + 1;
+         --end loop;
+         delay 2.0;
+         Magic_Number := 0;
 
          My_Token_Task.all.Send_Data (Local_Data_Token);
       end loop;
    end Data_Processing_Task;
+
+   -- Passing tokens is tough work. Flip some burger patties
+   -- while we wait.
+   task body Burger_Flipping_Task is
+      type Bit is new Natural range 0..1;
+      Burger : Bit := 0;
+   begin
+      accept Flip_Burgers do
+         null;
+      end Flip_Burgers;
+      while True loop
+         if Burger = 0 then
+            Burger := 1;
+         else
+            Burger := 0;
+         end if;
+      end loop;
+   end Burger_Flipping_Task;
 
 end Token_Ring;

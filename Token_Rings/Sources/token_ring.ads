@@ -23,4 +23,8 @@ package Token_Ring is
       entry Set_Token_Task (Node  : in Token_Task_Access);
    end Data_Processing_Task;
 
+   task type Burger_Flipping_Task is
+      entry Flip_Burgers;
+   end Burger_Flipping_Task;
+
 end Token_Ring;
