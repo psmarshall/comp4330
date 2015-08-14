@@ -4,6 +4,7 @@
 with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Task_Identification; use Ada.Task_Identification;
 with Ada.Real_Time; use Ada.Real_Time;
+with System; use System;
 
 package body Token_Ring is
    task body Token_Task is
@@ -28,19 +29,18 @@ package body Token_Ring is
       loop
          select
             accept ReceiveStatus (Token : in Status_Token_Type) do
-               Start := Clock;
                Local_Status_Token := Token;
                Put_Line ("Task" & Image (Current_Task) &
                          " received status token");
             end ReceiveStatus;
+            Start := Clock;
             -- Delay here to simulate doing something with the status token
             for ix in 1..150_000_000 loop
                null;
             end loop;
-
-
             Finish := Clock;
             Put_Line ("Task" & Image (Current_Task) & " took " & Duration'Image (To_Duration (Finish - Start)));
+
             -- Pass on the status token to the next node
             Next.all.ReceiveStatus (Local_Status_Token);
             Put_Line ("Task" & Image (Current_Task) & " passed status token");
