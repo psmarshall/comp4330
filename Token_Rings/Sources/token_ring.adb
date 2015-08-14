@@ -4,7 +4,6 @@
 with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Task_Identification; use Ada.Task_Identification;
 with Ada.Real_Time; use Ada.Real_Time;
-with Ada.Calendar.Formatting;
 
 package body Token_Ring is
    task body Token_Task is
