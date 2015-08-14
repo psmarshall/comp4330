@@ -34,7 +34,6 @@ package body Token_Ring is
                          " received status token");
             end ReceiveStatus;
             -- Delay here to simulate doing something with the status token
-            delay 0.1;
             for ix in 1..150_000_000 loop
                null;
             end loop;
@@ -94,7 +93,7 @@ package body Token_Ring is
          --for ix in 1..100_000_000 loop
          --   Magic_Number := Magic_Number + 1;
          --end loop;
-         delay 2.0;
+         delay 5.0;
          Magic_Number := 0;
 
          My_Token_Task.all.Send_Data (Local_Data_Token);
