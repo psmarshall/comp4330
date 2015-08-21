@@ -5,6 +5,7 @@ with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Task_Identification; use Ada.Task_Identification;
 with Ada.Real_Time; use Ada.Real_Time;
 with System; use System;
+with Ada.Dispatching; use Ada.Dispatching;
 
 package body Token_Ring is
    task body Token_Task is
@@ -35,15 +36,14 @@ package body Token_Ring is
             end ReceiveStatus;
             Start := Clock;
             -- Delay here to simulate doing something with the status token
-            for ix in 1..150_000_000 loop
+            for ix in 1..100_000_000 loop
                null;
             end loop;
             Finish := Clock;
-            Put_Line ("Task" & Image (Current_Task) & " took " & Duration'Image (To_Duration (Finish - Start)));
+            Put_Line ("Task" & Image (Current_Task) & " status processing took " & Duration'Image (To_Duration (Finish - Start)));
 
             -- Pass on the status token to the next node
             Next.all.ReceiveStatus (Local_Status_Token);
-            Put_Line ("Task" & Image (Current_Task) & " passed status token");
          or
             accept ReceiveData (Token : in Data_Token_Type) do
                Local_Data_Token := Token;
@@ -56,14 +56,11 @@ package body Token_Ring is
          or
             accept Send_Data (Token : in Data_Token_Type) do
                Local_Data_Token := Token;
-               Put_Line ("Task" & Image (Current_Task) &
-                         " received data back from worker");
             end Send_Data;
 
             -- We are finally done processing our data in our worker thread
             -- and we've gotten it back. Time to send it off to the next node.
             Next.all.ReceiveData (Local_Data_Token);
-            Put_Line ("Task" & Image (Current_Task) & " passed data token");
          end select;
       end loop;
    end Token_Task;
@@ -71,8 +68,8 @@ package body Token_Ring is
    task body Data_Processing_Task is
       Local_Data_Token : Data_Token_Type;
       My_Token_Task : Token_Task_Access;
-      type Number_Range is new Natural range 0..100_000_000;
-      Magic_Number : Number_Range := 0;
+      Magic_Number : Long_Long_Integer := 0;
+      Start, Finish, Target_Finish : Time;
    begin
       -- We need a pointer back to the task that handles the network entries,
       -- so accept and set it here.
@@ -90,11 +87,23 @@ package body Token_Ring is
          -- Delay here to simulate doing something with the data.
          -- This would normally change the Local_Data_Token, for example,
          -- to stick some data in it for another node.
-         --for ix in 1..100_000_000 loop
-         --   Magic_Number := Magic_Number + 1;
-         --end loop;
-         delay 5.0;
-         Magic_Number := 0;
+
+         Start := Clock;
+         Target_Finish := Start + Milliseconds (1000);
+         select
+            delay until Target_Finish;
+            Finish := Clock;
+         then abort
+            for ix in 1..100_000_000 loop
+               Magic_Number := Magic_Number + 1;
+               delay 0.00;-- Allow us to actually be interrupted
+            end loop;
+            Magic_Number := 0;
+            Finish := Clock;
+         end select;
+
+         Put_Line ("Task" & Image (Current_Task) & " data processing took "
+                   & Duration'Image (To_Duration (Finish - Start)));
 
          My_Token_Task.all.Send_Data (Local_Data_Token);
       end loop;
