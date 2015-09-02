@@ -1,0 +1,21 @@
+project Atomic_Actions is
+
+   for Source_Dirs use ("Sources");
+   for Object_Dir use "Objects";
+   for Exec_Dir use "Executables";
+   for Main use ("atomic_action.adb");
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-gnatwl.a.bc.cdfgh.hi.ijk.k.s.rrq.pp.oo.n.mm.lt.tu.uv.vw.wx.xyz", "-gnatVac", "-gnatyaAbBdefhiIknOprStxlcCu", "-gnato", "-fstack-check", "-gnatE", "-gnat12");
+   end Compiler;
+
+   package Builder is
+      for Default_Switches ("ada") use ("-s");
+   end Builder;
+
+   package Ide is
+      for Documentation_Dir use "Documentation";
+   end Ide;
+
+end Atomic_Actions;
+
