@@ -10,6 +10,12 @@ package body Atomic_Controller is
 
    protected body Monitor is
 
+      entry Activate when State = Waiting is
+
+      begin
+         State := Checking_In;
+      end Activate;
+
       entry Check_In (Task_Id : Task_Ids) when State = Checking_In is
 
       begin
@@ -51,7 +57,7 @@ package body Atomic_Controller is
 
       begin
          Condition       := Final_Condition;
-         State           := Checking_In;
+         State           := Waiting;
          Final_Condition := Succeeded;
       end Action_Result;
 

@@ -88,12 +88,20 @@ package body Generic_Atomic_Action is
       end loop;
    end Action_Task;
 
-   procedure Perform is
+   procedure Init_Tasks is
 
    begin
       for Id in Parts_Enum loop
          Tasks (Id).Identify (Id);
       end loop;
+   end Init_Tasks;
+
+   procedure Perform is
+
+   begin
+      -- Wake up our atomic action monitor to let tasks enter and start
+      -- performing their actions
+      Atomic_Action.Monitor.Activate;
 
       declare
          Condition : Atomic_Condition;

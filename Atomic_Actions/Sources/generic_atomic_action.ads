@@ -67,4 +67,6 @@ package Generic_Atomic_Action is
 
    procedure Perform;
 
+   procedure Init_Tasks;
+
 end Generic_Atomic_Action;

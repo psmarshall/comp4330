@@ -161,11 +161,18 @@ procedure Atomic_Action is
    use Atomic_Action_Package;
 
 begin
+   -- Get our tasks set up
+   Atomic_Action_Package.Init_Tasks;
+
    Target_Deflections.Write (Set => (Elevator => 2.0, Rudder => -1.2, Ailerons => 0.3));
-
    Atomic_Action_Package.Perform;
+   Put_Line ("The surfaces moved in time and without error. Let's try something trickier");
 
-   Put_Line ("The surfaces moved in time and without error.");
+   delay 5.0;
+   -- pitch up, yaw left and do a barrel roll!
+   Target_Deflections.Write (Set => (Elevator => 2.0, Rudder => -2.0, Ailerons => 45.0));
+   Atomic_Action_Package.Perform;
+   Put_Line ("Barrel roll initiated!");
 exception
    when Exception_Id : others => Show_Exception (Exception_Id);
 end Atomic_Action;

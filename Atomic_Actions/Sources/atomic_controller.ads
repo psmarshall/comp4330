@@ -11,7 +11,8 @@ generic
 
 package Atomic_Controller is
 
-   type Atomic_State is (Checking_In,
+   type Atomic_State is (Waiting,
+                         Checking_In,
                          All_Checked_In,
                          Checking_Out,
                          Final);
@@ -32,6 +33,8 @@ package Atomic_Controller is
 
    protected Monitor is
 
+      entry Activate;
+
       entry Check_In      (Task_Id   :     Task_Ids);
 
       entry Fail          (Condition :     Atomic_Condition);
@@ -43,7 +46,7 @@ package Atomic_Controller is
 
    private
       Check_List      : Task_List        := Check_List_All_Out;
-      State           : Atomic_State     := Checking_In;
+      State           : Atomic_State     := Waiting;
       Final_Condition : Atomic_Condition := Succeeded;
       Id_Counter      : Task_Ids         := Task_Ids'First;
 
