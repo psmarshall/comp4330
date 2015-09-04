@@ -29,62 +29,63 @@ package body Generic_Atomic_Action is
          Task_Id := Id;
       end Identify;
 
-      select
-         Monitor.Failed;
+      loop
+         select
+            Monitor.Failed;
 
-         -- Abort and clean up in case of a global Failed state
-         Actions (Task_Id).Cleanup.all;
-         Atomic_Action.Monitor.Check_Out (Failed_Check_Out) (Task_Id);
+            -- Abort and clean up in case of a global Failed state
+            Actions (Task_Id).Cleanup.all;
+            Atomic_Action.Monitor.Check_Out (Failed_Check_Out) (Task_Id);
 
-      then abort
+         then abort
 
-         Monitor.Check_In (Task_Id);
+            Monitor.Check_In (Task_Id);
 
-         begin
-
-            declare
-               Min_Delay_Deadline : constant Time := Clock + Actions (Task_Id).Scope.Start_Delay_Min;
-               Max_Delay_Deadline : constant Time := Clock + Actions (Task_Id).Scope.Start_Delay_Max;
             begin
 
-               -- Observe required startup delays.
-               select
-                  delay until Max_Delay_Deadline;
-                  raise Late_Activation;
-               then abort
-                  delay until Min_Delay_Deadline;
-               end select;
+               declare
+                  Min_Delay_Deadline : constant Time := Clock + Actions (Task_Id).Scope.Start_Delay_Min;
+                  Max_Delay_Deadline : constant Time := Clock + Actions (Task_Id).Scope.Start_Delay_Max;
+               begin
+
+                  -- Observe required startup delays.
+                  select
+                     delay until Max_Delay_Deadline;
+                     raise Late_Activation;
+                  then abort
+                     delay until Min_Delay_Deadline;
+                  end select;
+               end;
+
+               declare
+                  function Time_Min (t_1, t_2 : Time) return Time is (if t_1 < t_2 then t_1 else t_2);
+
+                  Relative_Deadline : constant Time := (if Actions (Task_Id).Scope.Max_Elapse = Time_Span_Last then
+                                                        Time_Last else Clock + Actions (Task_Id).Scope.Max_Elapse);
+                  Absolute_Deadline : constant Time := Actions (Task_Id).Scope.Deadline;
+                  Closer_Deadline   : constant Time := Time_Min (Relative_Deadline, Absolute_Deadline);
+               begin
+
+                  -- Execute this action part while observing the required deadline.
+                  select
+                     delay until Closer_Deadline;
+                     raise Time_Out;
+                  then abort
+                     Actions (Task_Id).Action.all;
+                  end select;
+               end;
+
+               Atomic_Action.Monitor.Check_Out (Normal_Check_Out) (Task_Id);
+
+            exception
+                  -- All exceptions in all parts are caught
+                  -- and the central atomic action monitor is informed.
+               when Time_Out        => Monitor.Fail (Time_Out_Condition);
+               when Late_Activation => Monitor.Fail (Late_Condition);
+               when others          => Monitor.Fail (Other_Exception);
             end;
-
-            declare
-               function Time_Min (t_1, t_2 : Time) return Time is (if t_1 < t_2 then t_1 else t_2);
-
-               Relative_Deadline : constant Time := (if Actions (Task_Id).Scope.Max_Elapse = Time_Span_Last then
-                                                     Time_Last else Clock + Actions (Task_Id).Scope.Max_Elapse);
-               Absolute_Deadline : constant Time := Actions (Task_Id).Scope.Deadline;
-               Closer_Deadline   : constant Time := Time_Min (Relative_Deadline, Absolute_Deadline);
-            begin
-
-               -- Execute this action part while observing the required deadline.
-               select
-                  delay until Closer_Deadline;
-                  raise Time_Out;
-               then abort
-                  Actions (Task_Id).Action.all;
-               end select;
-            end;
-
-            Atomic_Action.Monitor.Check_Out (Normal_Check_Out) (Task_Id);
-
-         exception
-               -- All exceptions in all parts are caught
-               -- and the central atomic action monitor is informed.
-            when Time_Out        => Monitor.Fail (Time_Out_Condition);
-            when Late_Activation => Monitor.Fail (Late_Condition);
-            when others          => Monitor.Fail (Other_Exception);
-         end;
-      end select;
-
+         end select;
+      end loop;
    end Action_Task;
 
    procedure Perform is
